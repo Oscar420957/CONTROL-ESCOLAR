@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Inicio de Sesión</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="icon" href="img/CEUMHLOGOshort.png">
 </head>
 <body>
 	<form method="post" action="../inicio/" id="form-log">
