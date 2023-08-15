@@ -6,7 +6,7 @@
 	<title>Inicio de Sesión</title>
 </head>
 <body>
-	<form method="post" action="../inicio/">
+	<form method="post" action="../inicio/" id="form-log">
 		<input type="text" name="user" id="user">
 		<input type="password" name="password" id="password">
 	</form>
