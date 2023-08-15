@@ -2,6 +2,10 @@ html, body {
 	height: 100%;
 }
 
+* {
+	font-family: "Rubik";
+}
+
 body
 {
 	margin: 0;
@@ -12,6 +16,13 @@ body
 {
 	width: 100%;
 	height: 150px;
+<<<<<<< HEAD
 	background-color: blue;
 	
+=======
+}
+
+@font-face {
+	font-family: "Rubik";
+	src: url("fonts/Rubik-VariableFont_wght.ttf") format("truetype");
 }
