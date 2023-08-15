@@ -8,6 +8,11 @@
 	<link rel="icon" href="img/CEUMHLOGOshort.png">
 </head>
 <body>
+	<header>
+		<div id="head">
+			
+		</div>
+	</header>
 	<form method="post" action="../inicio/" id="form-log">
 		<input type="text" name="user" id="user">
 		<input type="password" name="password" id="password">
