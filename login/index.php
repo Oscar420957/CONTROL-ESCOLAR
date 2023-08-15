@@ -8,11 +8,13 @@
 	<link rel="icon" href="img/CEUMHLOGOshort.png">
 </head>
 <body>
-	<header>
-		<div id="head">
-			CENTRO UNIVERSITARIO METROPOLITANO DE HIDALGO
-		</div>
-	</header>
+	<center>
+		<header>
+			<div id="head">
+				CENTRO UNIVERSITARIO METROPOLITANO DE HIDALGO
+			</div>
+		</header>
+	</center>
 	<main>
 		<form method="post" action="../inicio/" id="form-log">
 			<input type="text" name="user" id="user">
