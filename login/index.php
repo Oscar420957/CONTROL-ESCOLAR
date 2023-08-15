@@ -10,12 +10,19 @@
 <body>
 	<header>
 		<div id="head">
-			
+			CENTRO UNIVERSITARIO METROPOLITANO DE HIDALGO
 		</div>
 	</header>
-	<form method="post" action="../inicio/" id="form-log">
-		<input type="text" name="user" id="user">
-		<input type="password" name="password" id="password">
-	</form>
+	<main>
+		<form method="post" action="../inicio/" id="form-log">
+			<input type="text" name="user" id="user">
+			<input type="password" name="password" id="password">
+		</form>
+	</main>
+	<footer>
+		<div id="derechos">
+			2023 Derechos Reservados
+		</div>
+	</footer>
 </body>
 </html>
