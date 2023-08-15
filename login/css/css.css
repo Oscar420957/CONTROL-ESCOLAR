@@ -1,8 +1,10 @@
-html, body {
+html, body 
+{
 	height: 100%;
 }
 
-* {
+* 
+{
 	font-family: "Rubik";
 }
 
@@ -28,7 +30,8 @@ header
 	font-size: 28px;
 }
 
-@font-face {
+@font-face 
+{
 	font-family: "Rubik";
 	src: url("fonts/Rubik-VariableFont_wght.ttf") format("truetype");
 }
