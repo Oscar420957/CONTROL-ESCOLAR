@@ -6,6 +6,7 @@
 	<title>Inicio de Sesión</title>
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<link rel="icon" href="img/CEUMHLOGOshort.png">
+	<script type="text/javascript" src="../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
 <body>
 	<center>
