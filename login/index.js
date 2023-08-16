@@ -1,6 +1,6 @@
 $(document).ready(
 	$("#enter").click(function() {
-		let form = $("form"); // Obtiene el objeto form 
+		let form = $("#form-log"); // Obtiene el objeto form 
 		let datos = form.serialize(); // Serializa los datos del form
 
 		console.log(datos);

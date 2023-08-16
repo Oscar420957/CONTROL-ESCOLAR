@@ -20,7 +20,9 @@
 		<form method="post" action="../inicio/" id="form-log">
 			<input type="text" name="user" id="user">
 			<input type="password" name="password" id="password">
+			<input type="button" value="Ingresar" id="enter">
 		</form>
+		<script src="index.js"></script>
 	</main>
 	<footer>
 		<div id="derechos">

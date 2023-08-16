@@ -5,10 +5,10 @@ session_start();
 $user = $_POST['user'];
 $pass = $_POST['password'];
 
-$conn = mysqli_connect("127.0.0.1","root","31delfinZYTO!","ceumh");
+$conn = mysqli_connect("74.208.191.226","Gamanto","Serial3/0","ceumh");
 
 
-$query = "select pswd from accesoalumno where idAlumno = $user";
+$query = "select pswd from accesoAlumno where id_Alumno = $user";
 $result = $conn->query($query);
 
 while ($field = $result->fetch_object()) {
