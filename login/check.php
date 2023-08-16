@@ -5,7 +5,7 @@ session_start();
 $user = $_POST['user'];
 $pass = $_POST['password'];
 
-$conn = mysqli_connect("74.208.191.226","Gamanto","Serial3/0","ceumh");
+$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 
 $query = "select pswd from accesoAlumno where id_Alumno = $user";
