@@ -33,5 +33,5 @@ header
 @font-face 
 {
 	font-family: "Rubik";
-	src: url("fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+	src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
 }
