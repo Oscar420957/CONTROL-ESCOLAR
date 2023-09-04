@@ -1,5 +1,9 @@
 $(document).ready(
 	$("#enter").click(function() {
+		if ($("#user").val() == "" || ($("#password").val() == ""))
+		{
+			alert("No puede haber campos vacios!");
+		}
 		let form = $("#form-log"); // Obtiene el objeto form 
 		let datos = form.serialize(); // Serializa los datos del form
 
@@ -24,7 +28,7 @@ $(document).ready(
 
 		// Esta parte se ejecuta si hay un error
 		ajax.fail(function(jqXHR, status) {
-			alert("Hubo un error: " + status);
+			
 		});
 	})
 );

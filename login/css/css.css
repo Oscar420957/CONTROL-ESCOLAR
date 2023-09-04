@@ -8,15 +8,124 @@ html, body
 	font-family: "Rubik";
 }
 
+input
+{
+	height: fit-content;
+	border-radius: 20px;
+	padding: 10px 10px;
+}
 body
 {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
-header
+main
 {
+	display: flex;
+	justify-content: center;
+	height: 81%;
+	margin-top: 2%;
+	align-items: center;
+	align-content: center;
+}
 
+#logo
+{
+	width: 9%;
+	position: absolute;
+	top: 115px;
+}
+
+#img1
+{
+	background-image: url("../img/school.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 20%;
+	height: 85%;
+	position: absolute;
+	background-position-x: -500px;
+}
+#img2
+{
+	background-image: url("../img/school.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 20%;
+	height: 85%;
+	position: absolute;
+	top: 100px;
+	left: 80%;
+	background-position-x: -500px;
+}
+
+#diseño
+{
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	border: solid 10px #25377f;
+	border-radius: 30px;
+	height: 50%;
+	box-shadow: 0 10px 15px 10px rgba(0, 0, 0, 0.8);
+}
+
+#form-log
+{
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 25px 1fr;
+	grid-template-rows: repeat(5, 1fr);
+	height: 500px;
+	width: fit-content;
+}
+
+#user
+{
+	grid-row: 2;
+	grid-column: 2;
+	outline: solid 2px #25377f;
+	font-size: 20px;
+	border: none;
+}
+#userI
+{
+	grid-column: 1;
+	grid-row: 2;
+	font-size: 30px;
+	margin-top: 13%;
+	color: #25377f;
+}
+
+#password
+{
+	grid-row: 3;
+	grid-column: 2;
+	font-size: 20px;
+	outline: solid 2px #25377f;
+	border: none;
+}
+#passI
+{
+	grid-column: 1;
+	grid-row: 3;
+	font-size: 30px;
+	
+	color: #25377f;
+	margin-top: 13%;
+}
+
+#enter
+{
+	grid-row: 4/5;
+	grid-column: 2;
+	background-color: #25377f;
+	color: white;
+	outline: none;
+	border: none;
+	font-size: 15px;
 }
 
 #head
@@ -26,12 +135,30 @@ header
   	align-items: center;
 	width: 100%;
 	height: 100px;
-	background-color: blue;
+	background-color: #25377f;
 	font-size: 28px;
+	color: white;
 }
 
 @font-face 
 {
 	font-family: "Rubik";
 	src: url("../fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+
+footer
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #25377f;
+	height: 5%;
+	color: white;
+}
+
+header
+{
+	box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.9);
+	position: relative;
+	z-index: 100;
 }

@@ -6,27 +6,33 @@
 	<title>Inicio de Sesión</title>
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<link rel="icon" href="img/CEUMHLOGOshort.png">
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 	<script type="text/javascript" src="../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
 <body>
-	<center>
 		<header>
 			<div id="head">
 				CENTRO UNIVERSITARIO METROPOLITANO DE HIDALGO
 			</div>
 		</header>
-	</center>
+	<div id="img1"></div>
 	<main>
+		<img src="./img/CEUMHLOGOshort.png" id="logo">
+		<div id="diseño">
 		<form method="post" action="../inicio/" id="form-log">
-			<input type="text" name="user" id="user">
-			<input type="password" name="password" id="password">
+			<i class="fi fi-sr-user" id="userI"></i>
+			<input type="text" name="user" id="user" placeholder="User">
+			<i class="fi fi-sr-lock" id="passI"></i>
+			<input type="password" name="password" id="password" placeholder="Password">
 			<input type="button" value="Ingresar" id="enter">
 		</form>
+		</div>
 		<script src="index.js"></script>
 	</main>
+	<div id="img2"></div>
 	<footer>
 		<div id="derechos">
-			2023 Derechos Reservados
+			2023 Derechos Reservados | Ser CEUMH es ser el mejor!
 		</div>
 	</footer>
 </body>
