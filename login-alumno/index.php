@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Inicio de Sesión</title>
-	<link rel="stylesheet" type="text/css" href="css/css.css">
-	<link rel="icon" href="img/CEUMHLOGOshort.png">
+	<link rel="stylesheet" type="text/css" href="../css/css-logins.css">
+	<link rel="icon" href="../img/CEUMHLOGOshort.png">
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 	<script type="text/javascript" src="../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
@@ -17,7 +17,7 @@
 		</header>
 	<div id="img1"></div>
 	<main>
-		<img src="./img/CEUMHLOGOshort.png" id="logo">
+		<img src="../img/CEUMHLOGOshort.png" id="logo">
 		<div id="diseño">
 		<form method="post" action="../inicio/" id="form-log">
 			<i class="fi fi-sr-user" id="userI"></i>
