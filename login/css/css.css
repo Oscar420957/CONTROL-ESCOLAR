@@ -126,6 +126,12 @@ main
 	outline: none;
 	border: none;
 	font-size: 15px;
+	box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.7);
+	cursor: pointer;
+}
+
+#enter:active {
+	box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.7);	
 }
 
 #head
@@ -161,4 +167,43 @@ header
 	box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.9);
 	position: relative;
 	z-index: 100;
+}
+
+@media (max-height: 900px) {
+  #form-log {
+  	max-height: 290px;
+  }
+}
+
+@media (max-width: 739px) {
+	body {
+		background: url("../img/school.png");
+		background-position-x: -550px;
+	}
+
+	#logo {
+		width: 28%;
+	}
+
+	#img1, #img2 {
+		display: none;
+	}
+
+	#head {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	#diseño {
+		margin: 0 10px;
+	}
+
+	#userI, #passI {
+		color: white;
+	}
+
+	#derechos {
+		text-align: center;
+		font-size: 0.8rem;
+	}
 }
