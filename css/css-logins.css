@@ -170,6 +170,19 @@ header
 }
 
 @media (max-height: 900px) {
+  main {
+  	max-height: 499px;
+  }
+
+  h1 {
+  	font-size: 1.5rem !important;
+  }
+
+  #img1, #img2 {
+  	max-height: 80%;
+  	background-position-x: -400px;
+  }
+
   #form-log {
   	max-height: 290px;
   }
@@ -179,6 +192,11 @@ header
 	body {
 		background: url("../img/school.png");
 		background-position-x: -550px;
+	}
+
+	h1 {
+		color: white;
+		font-size: 1.8rem;
 	}
 
 	#logo {

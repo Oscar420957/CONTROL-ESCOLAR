@@ -39,12 +39,16 @@
 
 		@media (max-width: 739px) {
 			#logo {
-				width: 15%;
+				width: 17%;
 			}
 
 			h1 {
 				color: white;
 				font-size: 1.8rem;
+			}
+
+			main {
+				max-height: 81% !important;
 			}
 		}
 	</style>
