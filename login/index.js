@@ -21,14 +21,18 @@ $(document).ready(
 		ajax.done(function(respuesta) {
 			if (respuesta.val == "pass") {
 				form.submit();
-			} else {
+			} else if (respuesta.val == "notfound") {
+				alert("Datos erroneos!");
+			}  else {
 				alert("Datos erroneos!");
 			}
 		});
 
 		// Esta parte se ejecuta si hay un error
 		ajax.fail(function(jqXHR, status) {
-			
+			/*console.log(jqXHR)
+			console.log(status)
+			console.log(status.responseText);*/
 		});
 	})
 );

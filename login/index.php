@@ -1,3 +1,13 @@
+<?php
+	$userType = $_POST['user-type'];
+
+	if (!isset($userType)) {
+		echo "<script>alert('Seleccione un tipo de usuario');</script>";
+		header('Location: ../');
+	} /*else {
+		echo "<script>alert('Clickeaste en $userType');</script>";
+	}*/
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +34,7 @@
 			<input type="text" name="user" id="user" placeholder="User">
 			<i class="fi fi-sr-lock" id="passI"></i>
 			<input type="password" name="password" id="password" placeholder="Password">
+			<input type="text" name="user-type" style="display: none" value=<?php echo $userType; ?>>
 			<input type="button" value="Ingresar" id="enter">
 		</form>
 		</div>

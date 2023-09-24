@@ -5,6 +5,8 @@
 		header('Location: ../login');
 	}
 
+	$user = $_SESSION['usersession'];
+
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +17,6 @@
 	<title></title>
 </head>
 <body>
-
+	<?php echo "Bienvenido $user"; ?>
 </body>
 </html>

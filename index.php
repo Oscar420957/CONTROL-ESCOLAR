@@ -6,7 +6,7 @@
 	<title>Tipo de Usuario</title>
 	<link rel="stylesheet" type="text/css" href="./css/css-logins.css">
 	<link rel="icon" href="./img/CEUMHLOGOshort.png">
-	<script type="text/javascript" src="javascript.js"></script>
+	<script type="text/javascript" src="./jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 	<style>
 		main {
 			width: 50%;
@@ -64,6 +64,9 @@
 			<input type="button" value="Docente" id="enter" onclick="toDocente()">
 			<input type="button" value="Administrador" id="enter" onclick="toAdmin()">
 		</div>
+		<form style="display: none" method="post" action="./login/">
+			<input type="text" name="user-type" id="user-type" style="display: none">
+		</form>
 	</main>
 	<div id="img2"></div>
 	<footer>
@@ -71,5 +74,6 @@
 			2023 Derechos Reservados | Ser CEUMH es ser el mejor!
 		</div>
 	</footer>
+	<script src="javascript.js"></script>
 </body>
 </html>

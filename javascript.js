@@ -1,11 +1,17 @@
+let userType = $("#user-type");
+let form = $("form");
+
 function toAlumno() {
-	window.open("./login-alumno/", "_self");
+	userType.val("alumno");
+	form.submit();
 }
 
 function toDocente() {
-
+	userType.val("docente");
+	form.submit();
 }
 
 function toAdmin() {
-	
+	userType.val("admin");
+	form.submit();
 }
