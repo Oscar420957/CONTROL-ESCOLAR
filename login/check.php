@@ -27,7 +27,7 @@ while ($field = $result->fetch_object()) {
 	$encontrado = true;
 	if ($field->password == $pass) {
 		$_SESSION['usersession'] = $user;
-		echo json_encode(array("val" => "pass"));
+		echo json_encode(array("val" => "pass", "inicio" => $userType));
 	} else {
 		echo json_encode(array("val" => "fail"));
 	}

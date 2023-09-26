@@ -20,6 +20,7 @@ $(document).ready(
 		// Esta parte se ejecuta si no hay error en la peticion
 		ajax.done(function(respuesta) {
 			if (respuesta.val == "pass") {
+				form.attr("action", `../inicio/${respuesta.inicio}/`);
 				form.submit();
 			} else if (respuesta.val == "notfound") {
 				alert("Datos erroneos!");
