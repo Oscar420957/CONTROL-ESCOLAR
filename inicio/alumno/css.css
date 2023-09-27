@@ -1,0 +1,128 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito";
+}
+
+html, body {
+	height: 100%;
+}
+
+#container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 5% 1fr;
+	gap: 0 0.5rem;
+}
+
+#container > *:not(div) {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+
+
+
+#menu {
+	grid-column: 1;
+	justify-content: center;
+	align-content: center;
+	box-shadow: 5px 0 10px 0 rgba(0,0,0,0.6);
+}
+
+
+
+
+.app {
+	grid-column: 2;
+	display: grid;
+	grid-template-rows: repeat(10, 1fr);
+	grid-template-columns: repeat(13, 1fr);
+}
+
+.app > * {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.off {
+	display: none;
+}
+
+#v-inicio {
+	justify-items: center;
+}
+
+#img-alu {
+	outline: 2px solid cyan;
+	grid-column: 8 / 12;
+	grid-row: 2 / 7;
+	border-radius: 50%;
+	width: 80%;
+	background: url("./img/barry.jpg") no-repeat;
+	background-size: 100%;
+	background-position-x: center;
+}
+
+#nom-alu {
+	grid-column: 1 / 8;
+	grid-row: 2 / 6;
+	outline: 2px solid blue;
+	width: 60%;
+	height: 70%;
+	align-self: center;
+}
+
+
+#v-califs {
+	
+}
+
+#v-lista {
+	
+}
+
+#v-horario {
+	
+}
+
+
+
+
+ul {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 50%;
+	height: 70%;
+}
+
+i {
+	font-size: 2.5rem;
+}
+
+i:hover {
+	text-shadow: 2px 2px cyan;
+	cursor: pointer;
+}
+
+i:active {
+	color: cyan;
+	text-shadow: 2px 2px black;
+}
+
+h2 {
+	height: fit-content;
+	display: contents;
+}
+
+
+
+
+@font-face {
+	font-family: "Nunito";
+	src: url('./fonts/Nunito-VariableFont_wght.ttf') format("truetype");
+}
+
