@@ -12,12 +12,14 @@
 
 	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
-	$query = "select nombre from alumnos where id_alumno = ".$user;
+	$query = "select nombre, cuatrimestre, grupo from alumnos where id_alumno = ".$user;
 
 	$result = $conn->query($query);
 
 	while($row = $result->fetch_object()) {
 		$nom_alu = $row->nombre;
+		$cua_alu = $row->cuatrimestre;
+		$gru_alu = $row->grupo;
 	}
 ?>
 <!DOCTYPE html>
@@ -25,7 +27,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>alumno</title>
+	<title><?php echo $user;?></title>
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<link rel="icon" href="./img/logo_octagon_short.png">
 	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
@@ -49,7 +51,9 @@
 			<div id="img-alu"></div>
 			<div id="nom-alu">
 				<h2>Alumno: <?php echo $nom_alu ?></h2><br>
-				<h2>Número de cuenta: <?php echo $user ?></h2>
+				<h2>Número de cuenta: <?php echo $user ?></h2><br>
+				<h2>Cuatrimestre: <?php echo $cua_alu ?></h2><br>
+				<h2>Grupo: <?php echo $gru_alu ?></h2>
 			</div>
 		</div>
 

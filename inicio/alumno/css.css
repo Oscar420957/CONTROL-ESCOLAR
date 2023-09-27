@@ -68,10 +68,20 @@ html, body {
 #nom-alu {
 	grid-column: 1 / 8;
 	grid-row: 2 / 6;
-	outline: 2px solid blue;
+	border-left: solid 10px #25377f;
 	width: 60%;
 	height: 70%;
 	align-self: center;
+	padding: 15px;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 5px 10px 10px 0 black;
+	background-color: #e8e8e8;
+	border-top: solid 10px #e8e8e8;
+}
+#nom-alu:hover
+{
+	border-top: solid 10px #25377f;
+	transition: 0.5s all ease;
 }
 
 
