@@ -135,6 +135,9 @@ body.prev *
 #datos
 {
 	grid-row: 2;
+	margin-left: 5%;
+	font-size: 25px;
+	font-weight: bold;
 }
 
 

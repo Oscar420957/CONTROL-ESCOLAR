@@ -54,10 +54,10 @@
 			<div id="img-alu"></div>
 			<div id="nom-alu">
 				<div id="border-top"></div>
-				<h2 id="datos">Alumno: <?php echo $nom_alu ?><br>
+				<div id="datos">Alumno: <?php echo $nom_alu ?><br>
 				Número de cuenta: <?php echo $user ?><br>
 				Cuatrimestre: <?php echo $cua_alu ?><br>
-				Grupo: <?php echo $gru_alu ?></h2>
+				Grupo: <?php echo $gru_alu ?></div>
 			</div>
 		</div>
 
