@@ -91,7 +91,7 @@ body.prev *
 	height: 10px;
 	grid-row: 1;
 	animation-name: emina;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 	animation-timing-function: linear;
@@ -101,7 +101,7 @@ body.prev *
 #nom-alu:hover #border-top
 {
 	animation-name: anime;
-	animation-duration: 1s;
+	animation-duration: 0.5s;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 	animation-timing-function: linear;
@@ -115,6 +115,7 @@ body.prev *
 		width: 0%;
 	}
 	to{
+		border-top: 10px solid #25377f;
 		width: 100%;
 	}
 }
@@ -126,6 +127,7 @@ body.prev *
 		width: 100%;
 	}
 	to{
+		border-top: 10px solid #25377f;
 		width: 0%;
 	}
 }
