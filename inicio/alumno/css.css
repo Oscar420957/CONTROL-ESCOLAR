@@ -9,11 +9,16 @@ html, body {
 	height: 100%;
 }
 
+body.prev *
+{
+	animation-duration: 0s !important;
+}
+
 #container {
 	height: 100%;
 	display: grid;
 	grid-template-columns: 5% 1fr;
-	gap: 0 0.5rem;
+	gap: 0 0.5rem; 	
 }
 
 #container > *:not(div) {
@@ -68,20 +73,66 @@ html, body {
 #nom-alu {
 	grid-column: 1 / 8;
 	grid-row: 2 / 6;
+	display: grid;
+	grid-template-rows: 10px 1fr;
+	gap: 5px 0;
 	border-left: solid 10px #25377f;
 	width: 60%;
 	height: 70%;
 	align-self: center;
-	padding: 15px;
 	border-radius: 0 5px 5px 0;
 	box-shadow: 5px 10px 10px 0 black;
 	background-color: #e8e8e8;
-	border-top: solid 10px #e8e8e8;
 }
-#nom-alu:hover
+
+#border-top
 {
-	border-top: solid 10px #25377f;
-	transition: 0.5s all ease;
+	width: 100%;
+	height: 10px;
+	grid-row: 1;
+	animation-name: emina;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+#nom-alu:hover #border-top
+{
+	animation-name: anime;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+} 
+
+@keyframes anime
+{
+	from{
+		border-top: 10px solid #25377f;
+		width: 0%;
+	}
+	to{
+		width: 100%;
+	}
+}
+
+@keyframes emina
+{
+	from{
+		border-top: 10px solid #25377f;
+		width: 100%;
+	}
+	to{
+		width: 0%;
+	}
+}
+
+#datos
+{
+	grid-row: 2;
 }
 
 

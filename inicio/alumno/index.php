@@ -34,7 +34,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
+<body class="prev">
+	<script type="text/javascript">
+		setTimeout(() => {document.body.className = ""}, 1000);
+	</script>
 	<div id="container">
 		<nav id="menu">
 			<ul>
@@ -50,10 +53,11 @@
 		<div id="v-inicio" class="app">
 			<div id="img-alu"></div>
 			<div id="nom-alu">
-				<h2>Alumno: <?php echo $nom_alu ?></h2><br>
-				<h2>Número de cuenta: <?php echo $user ?></h2><br>
-				<h2>Cuatrimestre: <?php echo $cua_alu ?></h2><br>
-				<h2>Grupo: <?php echo $gru_alu ?></h2>
+				<div id="border-top"></div>
+				<h2 id="datos">Alumno: <?php echo $nom_alu ?><br>
+				Número de cuenta: <?php echo $user ?><br>
+				Cuatrimestre: <?php echo $cua_alu ?><br>
+				Grupo: <?php echo $gru_alu ?></h2>
 			</div>
 		</div>
 
