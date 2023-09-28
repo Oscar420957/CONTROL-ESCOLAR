@@ -37,26 +37,16 @@ body.prev *
 }
 
 
-
-
-.app {
-	grid-column: 2;
-	display: grid;
-	grid-template-rows: repeat(10, 1fr);
-	grid-template-columns: repeat(13, 1fr);
-}
-
-.app > * {
-	display: flex;
-	flex-flow: row wrap;
-}
-
 .off {
 	display: none;
 }
 
 #v-inicio {
+	display: grid;
 	justify-items: center;
+	grid-column: 2;
+	grid-template-rows: repeat(10, 1fr);
+	grid-template-columns: repeat(13, 1fr);
 }
 
 #img-alu {
@@ -68,6 +58,7 @@ body.prev *
 	background: url("./img/barry.jpg") no-repeat;
 	background-size: 100%;
 	background-position-x: center;
+	display: flex;
 }
 
 #nom-alu {
@@ -140,6 +131,78 @@ body.prev *
 	font-weight: bold;
 }
 
+/*CSS para la pestaña de calificaciones*/
+
+#v-califs
+{
+	grid-template-columns: 15% 1fr 15%;
+	grid-template-rows: 100px 1fr;
+}
+
+#tab-calif
+{
+	grid-column: 2;
+	grid-row: 2;
+	display: grid;
+	grid-auto-rows: 50px;
+	background-color: #e8e8e8;
+	gap: 0.3rem 0;
+}
+
+.mats
+{
+	width: 100%;
+	height: 100%;
+	gap: 0 3rem;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+	grid-row: 1;
+	grid-column: 1/2;
+	display: grid;
+	grid-template-columns: 80% 1fr;
+	background-color: red;
+	grid-template-rows: 50px;
+	grid-auto-rows: 410px;
+}
+
+.linkMat
+{
+	grid-column: 1;
+	grid-row: 1;
+	width: 80%;
+	margin-left: 2rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+#mat-1
+{
+	grid-row: 1;
+}
+
+#mat-2
+{
+	grid-row: 2;
+}
+
+#flechita
+{
+	grid-column: 2;
+	justify-self: center;
+}
+
+#prueba
+{
+	display: block;
+	height: 400px;
+	width: 100%;
+	grid-column: 1/3;
+	grid-row: 2;
+
+	outline: 5px solid black;
+}
 
 #v-califs {
 	
@@ -192,3 +255,59 @@ h2 {
 	src: url('./fonts/Nunito-VariableFont_wght.ttf') format("truetype");
 }
 
+/* Estilo básico del acordeón */
+.accordion-item {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+.accordion-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+}
+
+/* Cambia el estilo cuando se abre un elemento */
+.accordion-item.active .accordion-header {
+    background-color: #ddd;
+}
+
+/* Muestra el contenido cuando el elemento está activo */
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+#parciales
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+#FP
+{
+    grid-column: 1;
+}
+
+#SP
+{
+    grid-column: 2;
+}
+
+#TP
+{
+    grid-column: 3;
+}
+
+#title
+{
+	grid-column: 2;
+	grid-row: 1;
+	justify-self: center;
+	align-self: center;
+}

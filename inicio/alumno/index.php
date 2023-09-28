@@ -50,7 +50,7 @@
 		</nav>
 
 
-		<div id="v-inicio" class="app">
+		<div id="v-inicio">
 			<div id="img-alu"></div>
 			<div id="nom-alu">
 				<div id="border-top"></div>
@@ -62,7 +62,22 @@
 		</div>
 
 
-		<div id="v-califs" class="off">calificaciones</div>
+		<div id="v-califs" class="off">
+			<input type="text" name="user" id="user" value=<?php echo $user; ?> style="display: none;">
+			<div id="title"><h1>Calificaciones por materia</h1></div>
+			<div id="tab-calif">
+		<div class="accordion" id="acordeon">
+        	<div class="accordion-item">
+            <div class="accordion-header">Título 1</div>
+            <div id="parciales">
+            <div class="accordion-content" id="FP">Primer parcial</div>
+            <div class="accordion-content" id="SP">Segundo parcial</div>
+            <div class="accordion-content" id="TP">Tercer parcial</div>
+            </div>
+        </div>
+    </div>
+			</div>
+		</div>
 
 
 		<div id="v-lista" class="off">lista (asistencia)</div>
