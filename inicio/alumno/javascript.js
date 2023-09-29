@@ -23,7 +23,7 @@ let showInicio = () => {
 }
 let showCalifs = () => {
 	$("#v-califs").css("display", "grid");
-	let usuario = $("#user").val();
+	/*let usuario = $("#user").val();
 	$.ajax({
 		url: "consultaCalifs.php",
 		method: "post",
@@ -39,7 +39,7 @@ let showCalifs = () => {
 				let div = $("<div> </div>").
 			}
 		});
-	console.log(user);
+	console.log(user);*/
 }
 let showLista = () => {
 	$("#v-lista").css("display", "grid");

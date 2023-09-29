@@ -10,6 +10,7 @@
 
 	$user = $_SESSION['usersession'];
 
+	# SELECT DATOS DE ALUMNO
 	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 	$query = "select nombre, cuatrimestre, grupo from alumnos where id_alumno = ".$user;
@@ -21,6 +22,33 @@
 		$cua_alu = $row->cuatrimestre;
 		$gru_alu = $row->grupo;
 	}
+
+
+	# SELECT DE DATOS DE MATERIA POR ID_ALUMNO
+	
+	$query_dat_mat = "select m.id_Materia, m.nombre from alumnos as a, materia as m, alumno_materia as am where am.id_materia = m.id_materia and am.id_alumno = a.id_alumno and a.id_alumno = ".$user;
+
+	$result_dat_mat = $conn->query($query_dat_mat);
+
+	$arreglo_divs_mat = array();
+	while($fil = $result_dat_mat->fetch_object()) {
+		$idMateria = $fil->id_Materia;
+		$materia = $fil->nombre;
+
+		$div = "
+			<div class='accordion-item'>
+				<div class='accordion-header'>$materia<i class='fa-solid fa-angle-down'></i></div>
+	        	<div class='parciales'>
+	           		<div class='accordion-content FP'>Primer parcial</div>
+	           		<div class='accordion-content SP'>Segundo parcial</div>
+	           		<div class='accordion-content TP'>Tercer parcial</div>
+	       		</div>
+	       	</div>
+		";
+		array_push($arreglo_divs_mat, $div);
+	}
+
+	mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,16 +94,21 @@
 			<input type="text" name="user" id="user" value=<?php echo $user; ?> style="display: none;">
 			<div id="title"><h1>Calificaciones por materia</h1></div>
 			<div id="tab-calif">
-		<div class="accordion" id="acordeon">
-        	<div class="accordion-item">
-            <div class="accordion-header">Título 1</div>
-            <div id="parciales">
-            <div class="accordion-content" id="FP">Primer parcial</div>
-            <div class="accordion-content" id="SP">Segundo parcial</div>
-            <div class="accordion-content" id="TP">Tercer parcial</div>
-            </div>
-        </div>
-    </div>
+				<div class="accordion" id="acordeon">
+        			<!--div class="accordion-item">
+            			<div class="accordion-header">Título 1</div>
+            			<div id="parciales">
+            				<div class="accordion-content" id="FP">Primer parcial</div>
+            				<div class="accordion-content" id="SP">Segundo parcial</div>
+            				<div class="accordion-content" id="TP">Tercer parcial</div>
+            			</div>
+        			</div-->
+        			<?php 
+            			foreach ($arreglo_divs_mat as $i) {
+            				echo $i;
+            			}
+            		?>
+    			</div>
 			</div>
 		</div>
 

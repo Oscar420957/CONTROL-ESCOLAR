@@ -147,6 +147,7 @@ body.prev *
 	grid-auto-rows: 50px;
 	background-color: #e8e8e8;
 	gap: 0.3rem 0;
+	border-radius: 10px;
 }
 
 .mats
@@ -257,14 +258,17 @@ h2 {
 
 /* Estilo básico del acordeón */
 .accordion-item {
-    border: 1px solid #ccc;
     margin-bottom: 5px;
 }
 
 .accordion-header {
-    background-color: #f2f2f2;
+    background-color: #25377f;
     padding: 10px;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+    border-radius: 10px;
 }
 
 .accordion-content {
@@ -274,7 +278,7 @@ h2 {
 
 /* Cambia el estilo cuando se abre un elemento */
 .accordion-item.active .accordion-header {
-    background-color: #ddd;
+    background-color: #25377f;
 }
 
 /* Muestra el contenido cuando el elemento está activo */
@@ -282,24 +286,24 @@ h2 {
     display: block;
 }
 
-#parciales
+.parciales
 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
 
-#FP
+.FP
 {
     grid-column: 1;
 }
 
-#SP
+.SP
 {
     grid-column: 2;
 }
 
-#TP
+.TP
 {
     grid-column: 3;
 }
@@ -310,4 +314,10 @@ h2 {
 	grid-row: 1;
 	justify-self: center;
 	align-self: center;
+}
+
+.accordion-header i {
+	font-size: 20px;
+	float: right;
+	text-shadow: none;
 }
