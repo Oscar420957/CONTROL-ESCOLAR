@@ -25,27 +25,65 @@
 
 
 	# SELECT DE DATOS DE MATERIA POR ID_ALUMNO
-	
 	$query_dat_mat = "select m.id_Materia, m.nombre from alumnos as a, materia as m, alumno_materia as am where am.id_materia = m.id_materia and am.id_alumno = a.id_alumno and a.id_alumno = ".$user;
+	
+	# SELECT DE CALIFICACIONES POR PARCIAL DE MATERIA
+	$query_cal_parc = "select m.nombre as materia, amc4.parcial, amc4.calificacion from alumnos as a, alumno_materia as am, materia as m, alumno_materia_calif_cuatri as amc4 where am.id_alumno = a.id_alumno and am.id_materia = m.id_materia and amc4.id_Alumno_materia = am.id_Alum_materia and a.id_alumno = ".$user;
 
 	$result_dat_mat = $conn->query($query_dat_mat);
+	$result_cal_parc = $conn->query($query_cal_parc);
 
 	$arreglo_divs_mat = array();
+	$cont = 0;
+
 	while($fil = $result_dat_mat->fetch_object()) {
-		$idMateria = $fil->id_Materia;
 		$materia = $fil->nombre;
 
 		$div = "
 			<div class='accordion-item'>
 				<div class='accordion-header'>$materia<i class='fa-solid fa-angle-down'></i></div>
 	        	<div class='parciales'>
-	           		<div class='accordion-content FP'>Primer parcial</div>
-	           		<div class='accordion-content SP'>Segundo parcial</div>
-	           		<div class='accordion-content TP'>Tercer parcial</div>
-	       		</div>
-	       	</div>
 		";
+
+		while ($filCal = $result_cal_parc->fetch_object()) {
+			$num_parcial = $filCal->parcial;
+			$calif = $filCal->calificacion;
+			$materiaCalif = $filCal->materia;
+
+			if ($materia == $materiaCalif) {
+				switch ($num_parcial) {
+					case 1:
+						$div.="<div class='accordion-content FP'>Primer Parcial<br>Calificación: $calif</div>";
+						break;
+					case 2:
+						$div.="<div class='accordion-content SP'>Segundo Parcial<br>Calificación: $calif</div>";
+						break;
+					case 3:
+						$div.="<div class='accordion-content TP'>Tercer Parcial<br>Calificación: $calif</div>";
+						break;
+				}
+			}
+
+			$cont++;
+			if ($cont == 3) {
+				$cont = 0;
+				break;
+			}
+		}
+
+		$div.="	</div>
+	     	</div>";
+
 		array_push($arreglo_divs_mat, $div);
+	}
+
+
+	function write_to_console($elem) {
+		$console = $elem;
+		if (is_array($console)) {
+			$console = implode(',', $console);
+		}
+		echo "<script>console.log($console);</script>";
 	}
 
 	mysqli_close($conn);
@@ -95,14 +133,6 @@
 			<div id="title"><h1>Calificaciones por materia</h1></div>
 			<div id="tab-calif">
 				<div class="accordion" id="acordeon">
-        			<!--div class="accordion-item">
-            			<div class="accordion-header">Título 1</div>
-            			<div id="parciales">
-            				<div class="accordion-content" id="FP">Primer parcial</div>
-            				<div class="accordion-content" id="SP">Segundo parcial</div>
-            				<div class="accordion-content" id="TP">Tercer parcial</div>
-            			</div>
-        			</div-->
         			<?php 
             			foreach ($arreglo_divs_mat as $i) {
             				echo $i;
