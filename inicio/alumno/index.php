@@ -36,6 +36,7 @@
 	$arreglo_divs_mat = array();
 	$cont = 0;
 
+	#Funciones para el apartado de califs
 	while($fil = $result_dat_mat->fetch_object()) {
 		$materia = $fil->nombre;
 
@@ -99,6 +100,7 @@
 	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script type="text/javascript" src="./jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
 <body class="prev">
 	<script type="text/javascript">
@@ -146,7 +148,128 @@
 		<div id="v-lista" class="off">lista (asistencia)</div>
 
 
-		<div id="v-horario" class="off">horarios</div>
+		<div id="v-horario" class="off">
+			<input style="display: none;" type="text" name="user" id="user" value=<?php echo $user ?>>
+				<table id="horario">
+					<thead>
+						<th colspan="6"><b>HORARIO</b></th>
+						<tr>
+							<td id="hora">Hora</td>
+							<td>Lunes</td>
+							<td>Martes</td>
+							<td>Miercoles</td>
+							<td>Jueves</td>
+							<td>Viernes</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>07:00-08:00</td>
+							<td id="L7"></td>
+							<td id="M7"></td>
+							<td id="X7"></td>
+							<td id="J7"></td>
+							<td id="V7"></td>
+						</tr>
+						<tr>
+							<td>08:00-09:00</td>
+							<td id="L8"></td>
+							<td id="M8"></td>
+							<td id="X8"></td>
+							<td id="J8"></td>
+							<td id="V8"></td>
+						</tr>
+						<tr>
+							<td>09:00-10:00</td>
+							<td id="L9"></td>
+							<td id="M9"></td>
+							<td id="X9"></td>
+							<td id="J9"></td>
+							<td id="V9"></td>
+						</tr>
+						<tr>
+							<td>10:00-11:00</td>
+							<td id="L10"></td>
+							<td id="M10"></td>
+							<td id="X10"></td>
+							<td id="J10"></td>
+							<td id="V10"></td>
+						</tr>
+						<tr>
+							<td>11:00-12:00</td>
+							<td id="L11"></td>
+							<td id="M11"></td>
+							<td id="X11"></td>
+							<td id="J11"></td>
+							<td id="V11"></td>
+						</tr>
+						<tr>
+							<td>12:00-13:00</td>
+							<td id="L12"></td>
+							<td id="M12"></td>
+							<td id="X12"></td>
+							<td id="J12"></td>
+							<td id="V12"></td>
+						</tr>
+						<tr>
+							<td>13:00-14:00</td>
+							<td id="L13"></td>
+							<td id="M13"></td>
+							<td id="X13"></td>
+							<td id="J13"></td>
+							<td id="V13"></td>
+						</tr>
+						<tr>
+							<td>14:00-15:00</td>
+							<td id="L14"></td>
+							<td id="M14"></td>
+							<td id="X14"></td>
+							<td id="J14"></td>
+							<td id="V14"></td>
+						</tr>
+						<tr>
+							<td>15:00-16:00</td>
+							<td id="L15"></td>
+							<td id="M15"></td>
+							<td id="X15"></td>
+							<td id="J15"></td>
+							<td id="V15"></td>
+						</tr>
+						<tr>
+							<td>16:00-17:00</td>
+							<td id="L16"></td>
+							<td id="M16"></td>
+							<td id="X16"></td>
+							<td id="J16"></td>
+							<td id="V16"></td>
+						</tr>
+						<tr>
+							<td>17:00-18:00</td>
+							<td id="L17"></td>
+							<td id="M17"></td>
+							<td id="X17"></td>
+							<td id="J17"></td>
+							<td id="V17"></td>
+						</tr>
+						<tr>
+							<td>18:00-19:00</td>
+							<td id="L18"></td>
+							<td id="M18"></td>
+							<td id="X18"></td>
+							<td id="J18"></td>
+							<td id="V18"></td>
+						</tr>
+						<tr>
+							<td>19:00-20:00</td>
+							<td id="L19"></td>
+							<td id="M19"></td>
+							<td id="X19"></td>
+							<td id="J19"></td>
+							<td id="V19"></td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
 
 
 	</div><script type="text/javascript" src="javascript.js"></script>
