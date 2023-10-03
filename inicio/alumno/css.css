@@ -262,7 +262,7 @@ h2 {
 }
 
 .accordion-header {
-    background-color: #25377f;
+    background-color: #414E83;
     padding: 10px;
     cursor: pointer;
     color: white;
@@ -278,7 +278,7 @@ h2 {
 
 /* Cambia el estilo cuando se abre un elemento */
 .accordion-item.active .accordion-header {
-    background-color: #25377f;
+    background-color: #223580;
 }
 
 /* Muestra el contenido cuando el elemento está activo */
@@ -314,6 +314,14 @@ h2 {
 	grid-row: 1;
 	justify-self: center;
 	align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #223580;
+	width: 80%;
+	height: 70%;
+	color: white;
+	border-radius: 10px;
 }
 
 .accordion-header i {

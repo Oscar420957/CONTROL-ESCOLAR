@@ -130,7 +130,7 @@
 
 		<div id="v-califs" class="off">
 			<input type="text" name="user" id="user" value=<?php echo $user; ?> style="display: none;">
-			<div id="title"><h1>Calificaciones por materia</h1></div>
+			<div id="title"><h1>Calificaciones Por Materia</h1></div>
 			<div id="tab-calif">
 				<div class="accordion" id="acordeon">
         			<?php 
