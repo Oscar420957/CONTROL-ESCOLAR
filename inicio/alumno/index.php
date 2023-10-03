@@ -100,7 +100,7 @@
 	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	<script type="text/javascript" src="./jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
+	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
 <body class="prev">
 	<script type="text/javascript">
