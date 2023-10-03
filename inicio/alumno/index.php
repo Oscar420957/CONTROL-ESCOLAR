@@ -53,13 +53,13 @@
 			if ($materia == $materiaCalif) {
 				switch ($num_parcial) {
 					case 1:
-						$div.="<div class='accordion-content FP'>Primer Parcial<br>Calificación: $calif</div>";
+						$div.="<div class='accordion-content FP'><b>Primer Parcial</b><br>Calificación: $calif</div>";
 						break;
 					case 2:
-						$div.="<div class='accordion-content SP'>Segundo Parcial<br>Calificación: $calif</div>";
+						$div.="<div class='accordion-content SP'><b>Segundo Parcial</b><br>Calificación: $calif</div>";
 						break;
 					case 3:
-						$div.="<div class='accordion-content TP'>Tercer Parcial<br>Calificación: $calif</div>";
+						$div.="<div class='accordion-content TP'><b>Tercer Parcial</b><br>Calificación: $calif</div>";
 						break;
 				}
 			}

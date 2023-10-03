@@ -283,9 +283,20 @@ h2 {
 
 /* Muestra el contenido cuando el elemento está activo */
 .accordion-item.active .accordion-content {
-    display: block;
+	width: 90%;
+    box-shadow: 0 5px 10px 0 black;
+    justify-content: center;
+    justify-items: center;
+    flex-flow: row wrap;
+    display: flex;
+    background-color: #cfcfcf;
+    border-radius: 5px;
 }
 
+.accordion-item.active .parciales
+{
+	padding: 2rem 0;
+}
 .parciales
 {
     display: grid;
@@ -328,4 +339,9 @@ h2 {
 	font-size: 20px;
 	float: right;
 	text-shadow: none;
+}
+
+b
+{
+	margin: 0 30%;
 }
