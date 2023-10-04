@@ -52,15 +52,16 @@
 			$materiaCalif = $filCal->materia;
 
 			if ($materia == $materiaCalif) {
+				$calif = ($calif == -1) ? "No se ha registrado calificación aún" : "Calificación: ".$calif;
 				switch ($num_parcial) {
 					case 1:
-						$div.="<div class='accordion-content FP'><b>Primer Parcial</b><br>Calificación: $calif</div>";
+						$div.="<div class='accordion-content FP'><b>Primer Parcial</b><br>$calif</div>";
 						break;
 					case 2:
-						$div.="<div class='accordion-content SP'><b>Segundo Parcial</b><br>Calificación: $calif</div>";
+						$div.="<div class='accordion-content SP'><b>Segundo Parcial</b><br>$calif</div>";
 						break;
 					case 3:
-						$div.="<div class='accordion-content TP'><b>Tercer Parcial</b><br>Calificación: $calif</div>";
+						$div.="<div class='accordion-content TP'><b>Tercer Parcial</b><br>$calif</div>";
 						break;
 				}
 			}
@@ -150,6 +151,7 @@
 
 		<div id="v-horario" class="off">
 			<input style="display: none;" type="text" name="user" id="user" value=<?php echo $user ?>>
+			<script src="horario.js"></script>
 				<table id="horario">
 					<thead>
 						<th colspan="6"><b>HORARIO</b></th>
@@ -165,27 +167,27 @@
 					<tbody>
 						<tr>
 							<td>07:00-08:00</td>
-							<td id="L7"></td>
-							<td id="M7"></td>
-							<td id="X7"></td>
-							<td id="J7"></td>
-							<td id="V7"></td>
+							<td id="L07"></td>
+							<td id="M07"></td>
+							<td id="X07"></td>
+							<td id="J07"></td>
+							<td id="V07"></td>
 						</tr>
 						<tr>
 							<td>08:00-09:00</td>
-							<td id="L8"></td>
-							<td id="M8"></td>
-							<td id="X8"></td>
-							<td id="J8"></td>
-							<td id="V8"></td>
+							<td id="L08"></td>
+							<td id="M08"></td>
+							<td id="X08"></td>
+							<td id="J08"></td>
+							<td id="V08"></td>
 						</tr>
 						<tr>
 							<td>09:00-10:00</td>
-							<td id="L9"></td>
-							<td id="M9"></td>
-							<td id="X9"></td>
-							<td id="J9"></td>
-							<td id="V9"></td>
+							<td id="L09"></td>
+							<td id="M09"></td>
+							<td id="X09"></td>
+							<td id="J09"></td>
+							<td id="V09"></td>
 						</tr>
 						<tr>
 							<td>10:00-11:00</td>
