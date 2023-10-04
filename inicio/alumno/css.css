@@ -216,7 +216,7 @@ body.prev *
 #v-horario {
 	justify-content: center;
 	align-content: center;
-	grid-template-columns: 15% 1fr 15%;
+	grid-template-columns: 25% 1fr 15%;
 }
 
 
@@ -381,5 +381,5 @@ td
 	grid-column: 1;
     grid-row: 1;
     height: fit-content;
-    padding: 0 2rem;
+    margin: 0 5rem;
 }
