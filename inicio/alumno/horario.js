@@ -10,7 +10,6 @@ let ajax = $.ajax({
 ajax.done(function(respuesta) {
 	let colors = ['red','orange','purple','lime','cyan','blue','yellow','brown','pink','crimson'];
 	let mapColors = new Map();
-	console.log(respuesta);
 
 	let cont = 1;
 	for (let obj of respuesta) {
@@ -19,10 +18,6 @@ ajax.done(function(respuesta) {
 		let dia = obj2["dia_semana"];
 		let horario = obj2["horario"];
 		let horas = horario.split("-");
-
-		console.log(materia,typeof(materia));
-		console.log(dia,typeof(dia));
-		console.log(horario,typeof(horario));
 
 		if (!mapColors.has(materia)) {
 			mapColors.set(materia,colors.shift());
@@ -33,7 +28,17 @@ ajax.done(function(respuesta) {
 			$(`#${dia[0].toUpperCase()}${pairH}`).css("background",mapColors.get(materia));
 		}
 		cont++;
-	}		
+	}
+
+	let tabla = $("<table>");
+	tabla.attr("id", "tabla-materias");
+	tabla.append($("<th>Materias</th>"));
+	for(let [i,j] of mapColors)
+	{
+		tabla.append($(`<tr><td style='background: ${j}'>${i}</td></tr>`));
+	}
+
+	$("#v-horario").append(tabla);		
 });
 
 ajax.fail(function(jqXHR, status) {

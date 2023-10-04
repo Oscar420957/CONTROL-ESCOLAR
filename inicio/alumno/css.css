@@ -375,3 +375,11 @@ td
 	width: fit-content;
 	padding: 0.5rem 4rem;
 }
+
+#tabla-materias
+{
+	grid-column: 1;
+    grid-row: 1;
+    height: fit-content;
+    padding: 0 2rem;
+}
