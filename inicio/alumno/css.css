@@ -209,9 +209,52 @@ body.prev *
 	
 }
 
+
+
 #v-lista {
-	
+	grid-template-columns: 10% 1fr 10%;
+	grid-template-rows: 5% 10% 1fr 5%;
+	height: 100%;
 }
+
+#title-lista {
+	grid-column: 2;
+	grid-row: 2;
+	justify-self: center;
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #223580;
+	width: 80%;
+	height: 70%;
+	color: white;
+	border-radius: 10px;
+}
+
+#tab-asistencia {
+	grid-column: 2;
+	grid-row: 3;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 10% 1fr;
+	grid-template-columns: 1fr;
+}
+
+#nav-materias {
+	grid-row: 1;
+	width: 100%;
+	height: 100%;
+}
+
+#info-asistencia {
+	grid-row: 2;
+	width: 100%;
+	height: 100%;
+}
+
+
 
 #v-horario {
 	justify-content: center;

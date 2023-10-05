@@ -15,7 +15,7 @@ $(document).ready(() => {
 		offAll();
 		showHorario();
 	});
-	$("#salir").on("click", () => window.location.assign("closeSession.php"));
+	$("#salir").on("click", () => window.location.assign("./phps/closeSession.php"));
 });
 
 let showInicio = () => {

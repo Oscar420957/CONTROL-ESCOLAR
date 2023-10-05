@@ -146,12 +146,18 @@
 		</div>
 
 
-		<div id="v-lista" class="off">lista (asistencia)</div>
+		<div id="v-lista" class="off">
+			<div id="title-lista"><h2>Consulta Asistencias</h2></div>
+			<div id="tab-asistencia">
+				<ul id="nav-materias"></ul>
+				<div id="info-asistencia"></div>
+			</div>
+		</div>
 
 
 		<div id="v-horario" class="off">
 			<input style="display: none;" type="text" name="user" id="user" value=<?php echo $user ?>>
-			<script src="horario.js"></script>
+			<script src="./js/horario.js"></script>
 				<table id="horario">
 					<thead>
 						<th colspan="6"><b>HORARIO</b></th>
@@ -274,6 +280,6 @@
 		</div>
 
 
-	</div><script type="text/javascript" src="javascript.js"></script>
+	</div><script type="text/javascript" src="./js/javascript.js"></script>
 </body>
 </html>
