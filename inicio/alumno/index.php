@@ -147,6 +147,7 @@
 
 
 		<div id="v-lista" class="off">
+			<script src="./js/lista_asistencia.js"></script>
 			<div id="title-lista"><h2>Consulta Asistencias</h2></div>
 			<div id="tab-asistencia">
 				<ul id="nav-materias"></ul>
@@ -156,7 +157,6 @@
 
 
 		<div id="v-horario" class="off">
-			<input style="display: none;" type="text" name="user" id="user" value=<?php echo $user ?>>
 			<script src="./js/horario.js"></script>
 				<table id="horario">
 					<thead>
