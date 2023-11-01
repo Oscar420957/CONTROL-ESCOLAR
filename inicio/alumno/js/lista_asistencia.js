@@ -50,7 +50,7 @@ ajaxLista.done(function(respuesta) {
 			llenar_div(info_pase_lista, i);
 		});
 	}
-	console.log(arreglo_materias, info_pase_lista);
+	//console.log(arreglo_materias, info_pase_lista);
 });
 
 ajaxLista.fail(function(jqXHR, status) {

@@ -13,15 +13,21 @@
 	# SELECT DATOS DE ALUMNO
 	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
-	$query = "select nombre, cuatrimestre, grupo from alumnos where id_alumno = ".$user;
+	$query = "select a.nombre as nomalu, a.cuatrimestre, a.grupo, a.foto, c.nombre as nomcar from alumnos as a, carrera as c where a.carrera = c.id_Carrera and id_alumno = ".$user;
 
 	$result = $conn->query($query);
 
 	while($row = $result->fetch_object()) {
-		$nom_alu = $row->nombre;
+		$nom_alu = $row->nomalu;
 		$cua_alu = $row->cuatrimestre;
 		$gru_alu = $row->grupo;
+		$fot_alu = $row->foto;
+		$car_alu = $row->nomcar;
 	}
+
+	#header('Content-Type: image/jpeg');
+	#$img = imagecreatefromstring($fot_alu);
+	#imagejpeg($img);
 
 
 	# SELECT DE DATOS DE MATERIA POR ID_ALUMNO
@@ -120,13 +126,16 @@
 
 
 		<div id="v-inicio">
-			<div id="img-alu"></div>
+			<div id="img-alu" style="background: url('./img/<?php echo $user.".jpg" ?>') no-repeat; background-size: cover;"></div>
 			<div id="nom-alu">
 				<div id="border-top"></div>
-				<div id="datos">Alumno: <?php echo $nom_alu ?><br>
-				Número de cuenta: <?php echo $user ?><br>
-				Cuatrimestre: <?php echo $cua_alu ?><br>
-				Grupo: <?php echo $gru_alu ?></div>
+				<div id="datos">
+					Alumno: <?php echo $nom_alu ?><br>
+					Número de cuenta: <?php echo $user ?><br>
+					Cuatrimestre: <?php echo $cua_alu ?><br>
+					Grupo: <?php echo $gru_alu ?><br>
+					Carrera: <?php echo $car_alu ?>
+				</div>
 			</div>
 		</div>
 
