@@ -32,7 +32,7 @@ ajaxHorario.done(function(respuesta) {
 
 	let tabla = $("<table>");
 	tabla.attr("id", "tabla-materias");
-	tabla.append($("<th>Materias</th>"));
+	tabla.append($("<tr><th>MATERIAS</th></tr>"));
 	for(let [i,j] of mapColors)
 	{
 		tabla.append($(`<tr><td style='background: ${j}'>${i}</td></tr>`));

@@ -274,8 +274,12 @@ body.prev *
 
 #v-horario {
 	justify-content: center;
-	align-content: center;
+	align-items: center;
 	grid-template-columns: 25% 1fr 15%;
+	grid-template-rows: 1fr;
+	height: 100%;
+	overflow-y: overlay;
+	overflow-x: hidden;
 }
 
 
@@ -416,17 +420,29 @@ b
 	justify-self: center;
 }
 
-th
+table {
+	border-spacing: 1rem;
+	font-weight: bold;
+}
+
+th,td
 {
-	border: 1px solid black;
 	padding: 0.5rem 2rem;
+	box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.3) !important;
+	border-radius: 10px;
+}
+
+tr {
+	background: rgba(0,0,0,0.2);
 }
 
 td
 {
-	padding: 0.5rem 2rem;
-	border: 1px solid black;
 	text-align: center;
+}
+
+th {
+	background: rgba(0,0,0,0.3);
 }
 
 #hora
