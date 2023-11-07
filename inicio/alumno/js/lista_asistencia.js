@@ -46,8 +46,11 @@ ajaxLista.done(function(respuesta) {
 
 	for (let i of arreglo_materias) {
 		$(`#${i.substring(0,2)}`).on('click', () => {
+			off_color();
+			$(`#${i.substring(0,2)}`).css("background","rgba(0,0,0,0.4)");
 			$('#info-asistencia').empty();
-			llenar_div(info_pase_lista, i);
+			//llenar_div(info_pase_lista, i);
+			fill_tab_attend(info_pase_lista, i);
 		});
 	}
 	//console.log(arreglo_materias, info_pase_lista);
@@ -58,15 +61,26 @@ ajaxLista.fail(function(jqXHR, status) {
 	console.log(status);
 });
 
+function off_color() {
+	let lis = $('#nav-materias li');
+	lis.each(function(indx, elem) {
+		$(elem).css("background","rgba(0,0,0,0.2)");
+	});
+}
+
 function llenar_lis(arreglo_mat) {
 	for (let mat of arreglo_mat) {
 		let li = $(`<li id='${mat.substring(0,2)}'></li>`);
-		li.css("border","1px solid black");
-		li.css("display","flex");
-		li.css("align-items","center");
-		li.css("height","100%");
-		li.css("padding","0 1rem");
-		li.css("cursor","pointer");
+		li.css({
+			"border-radius":"10px",
+			"display":"flex",
+			"align-items":"center",
+			"height":"100%",
+			"padding":"0 1rem",
+			"cursor":"pointer",
+			"background":"rgba(0,0,0,0.2)",
+			"box-shadow":"1px 1px 10px 0 rgba(0,0,0,0.3)"
+		});
 		li.html(mat);
 		nav_mat.append(li);
 	}
@@ -87,3 +101,19 @@ function llenar_div(obj, materia) {
 	$('#info-asistencia').append(div);
 }
 
+function fill_tab_attend(obj, materia) {
+	let tab = $("<table></table>");
+	let th = $("<tr colspan='2'></tr>");
+	th.append($("<td>FECHA</td>"), $("<td>ASISTENCIA</td>"));
+	tab.append(th);
+
+	let contador = 0;
+	for (let i = 0; i < obj[materia].length; i+=2) {
+		let tr = $("<tr></tr>");
+		tr.append($(`<td>${obj[materia][contador+0]}</td>`), $(`<td style='background: ${(obj[materia][contador+1] == "Presente") ? "rgba(0,128,0,0.8)" : "rgba(255,0,0,0.8)"}'>${obj[materia][contador+1]}</td>`));
+		tab.append(tr);
+		contador+=2;
+	}
+
+	$('#info-asistencia').append(tab);
+}

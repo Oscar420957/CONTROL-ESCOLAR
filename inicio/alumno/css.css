@@ -247,7 +247,7 @@ body.prev *
 	grid-row: 1;
 	width: fit-content;
 	height: 100%;
-	box-shadow: 0 0 5px 3px rgb(0,0,0,30%);
+	/*box-shadow: 0 0 5px 3px rgb(0,0,0,30%);*/
 	border-radius: 5px;
 	gap: 0 2rem;
 	align-content: center;
