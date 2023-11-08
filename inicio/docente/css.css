@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Nunito";
+}
+
+html, body {
+	height: 100%;
+}
+
+body.prev *
+{
+	animation-duration: 0s !important;
+}
+#container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 5% 1fr;
+	gap: 0 0.5rem; 	
+}
+
+#container > *:not(div) {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#menu {
+	grid-column: 1;
+	justify-content: center;
+	align-content: center;
+	box-shadow: 5px 0 10px 0 rgba(0,0,0,0.6);
+}
+
+.off {
+	display: none;
+}
+
+#v-inicio {
+	display: grid;
+	justify-items: center;
+	grid-column: 2;
+	grid-template-rows: repeat(10, 1fr);
+	grid-template-columns: repeat(13, 1fr);
+}
+
+#img-alu {
+	grid-column: 8 / 12;
+	grid-row: 2 / 7;
+	border-radius: 50%;
+	width: 80%;
+	/*background: url("./img/barry.jpg") no-repeat;*/
+	background-size: 100%;
+	background-position-x: center;
+	display: flex;
+	box-shadow: 5px 10px 10px 0 black;
+}
+
+#nom-alu {
+	grid-column: 1 / 8;
+	grid-row: 2 / 6;
+	display: grid;
+	grid-template-rows: 10px 1fr;
+	gap: 5px 0;
+	border-left: solid 10px #25377f;
+	width: 60%;
+	height: fit-content;
+	align-self: center;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 5px 10px 10px 0 black;
+	background-color: #e8e8e8;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 50%;
+	height: 70%;
+}
+
+i {
+	font-size: 2.5rem;
+	color: #414E83;
+}
+
+i:hover {
+	text-shadow: 2px 2px black;
+	cursor: pointer;
+}
+
+i:active {
+	color: black;
+	text-shadow: 2px 2px black;
+}
+
+@font-face {
+	font-family: "Nunito";
+	src: url('../../fonts/Nunito-VariableFont_wght.ttf') format("truetype");
+}
+
+#border-top
+{
+	width: 100%;
+	height: 10px;
+	grid-row: 1;
+	animation-name: emina;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+#nom-alu:hover #border-top
+{
+	animation-name: anime;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes anime
+{
+	from{
+		border-top: 10px solid #25377f;
+		width: 0%;
+	}
+	to{
+		border-top: 10px solid #25377f;
+		width: 100%;
+	}
+}
+
+@keyframes emina
+{
+	from{
+		border-top: 10px solid #25377f;
+		width: 100%;
+	}
+	to{
+		border-top: 10px solid #25377f;
+		width: 0%;
+	}
+}
