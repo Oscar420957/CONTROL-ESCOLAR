@@ -59,7 +59,32 @@
 
 		<div id="v-grupos" class="off">
 			<div id="grid-grupos">
-				
+				<div id="materias">
+					<div id="titulo-materias">Grupos</div>
+					<div id="grupo-mat"></div>
+				</div>
+				<div id="alumnos">
+					<div id="titulo-alu">Alumnos</div>
+					<div id="alums"></div>
+				</div>
+				<div id="califs">
+					<div id="titulo-cali">Califiación</div>
+					<div id="calfs">
+						<form id="form-califs">
+							<input id="rP1" type="radio" name="parcial" value="1">
+							<label id="P1" for="iC1">Primer Parcial</label>
+							<input id="iC1" type="number" name="califiacion" required step=".01">
+							<input id="rP2" type="radio" name="parcial" value="2">
+							<label id="P2" for="iC2">Segundo Parcial</label>
+							<input id="iC2" type="number" name="califiacion" required step=".01">
+							<input id="rP3" type="radio" name="parcial" value="3">
+							<label id="P3" for="iC3">Tercer Parcial</label>
+							<input id="iC3" type="number" name="califiacion" required step=".01">
+							<input id="guardar" type="button" name="guardar" value="Guardar">
+							<input id="modificar" type="button" name="modificar" value="Modificar">
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 

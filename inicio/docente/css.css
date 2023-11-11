@@ -143,8 +143,198 @@ i:active {
 	width: 100%;
 	grid-column: 2;
 	grid-row: 2;
-	border: 2px solid #414E83;
+	border: 7px solid #414E83;
 	box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+#materias
+{
+	grid-column: 1;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 20% 80%;
+	grid-template-columns: 1fr;
+	padding: 1rem;
+	gap: 1rem;
+}
+
+#titulo-materias
+{
+	grid-row: 1;
+	grid-column: 1;
+	padding:  2rem;
+	background-color: #414E83;
+	border-radius: 10px;
+	font-size: 36px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+#grupo-mat
+{
+	grid-row: 2;
+	grid-column: 1;
+	overflow-y: overlay;
+	overflow-x: hidden;
+}
+
+#alumnos
+{
+	grid-column: 2;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 20% 80%;
+	grid-template-columns: 1fr;
+	padding: 1rem;
+	gap: 1rem;
+}
+
+#titulo-alu
+{
+	grid-row: 1;
+	grid-column: 1;
+	padding:  2rem;
+	background-color: #414E83;
+	border-radius: 10px;
+	font-size: 36px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+#alums
+{
+	grid-row: 2;
+	grid-column: 1;
+	overflow-y: overlay;
+	overflow-x: hidden;
+}
+
+#califs
+{
+	grid-column: 3;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 20% 80%;
+	grid-template-columns: 1fr;
+	padding: 1rem;
+	gap: 1rem;
+}
+
+#titulo-cali
+{
+	grid-row: 1;
+	grid-column: 1;
+	padding:  2rem;
+	background-color: #414E83;
+	border-radius: 10px;
+	font-size: 36px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+#calfs
+{
+	grid-row: 2;
+	grid-column: 1;
+}
+
+#form-califs
+{
+	display: grid;
+	grid-template-columns: 5% repeat(2, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	height: 100%;
+	justify-items: center;
+	align-items: center;
+}
+
+input[type="number"]
+{
+	height: 2rem;
+}
+
+#iC1
+{
+	grid-column: 3;
+	grid-row: 1;
+}
+
+#iC2
+{
+	grid-column: 3;
+	grid-row: 2;
+}
+
+#iC3
+{
+	grid-column: 3;
+	grid-row: 3;
+}
+
+#rP1
+{
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#rP2
+{
+	grid-column: 1;
+	grid-row: 2;
+}
+
+#rP3
+{
+	grid-column: 1;
+	grid-row: 3;
+}
+
+#P1
+{
+	grid-column: 2;
+	grid-row: 1;
+}
+
+#P2
+{
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#P3
+{
+	grid-column: 2;
+	grid-row: 3;
+}
+
+input[type="button"]
+{
+	width: 60%;
+	height: fit-content;
+}
+
+#guardar
+{
+	grid-column: 2;
+	grid-row: 5;
+}
+
+#modificar
+{
+	grid-column: 3;
+	grid-row: 5;
 }
 
 @keyframes anime
