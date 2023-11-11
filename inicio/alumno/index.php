@@ -101,7 +101,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php echo $user;?></title>
+	<title>Alumno | <?php echo $user;?></title>
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<link rel="icon" href="./img/logo_octagon_short.png">
 	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
@@ -109,10 +109,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
-<body class="prev">
-	<script type="text/javascript">
-		setTimeout(() => {document.body.className = ""}, 1000);
-	</script>
+<body>
 	<div id="container">
 		<nav id="menu">
 			<ul>

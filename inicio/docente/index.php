@@ -31,7 +31,8 @@
 	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
-	<title></title>
+	<link rel="icon" href="../../img/CEUMHLOGOshort.png">
+	<title>Docente | <?php echo $user ?></title>
 </head>
 <body>
 	<div id="container">
@@ -52,6 +53,13 @@
 				<div id="datos">
 					Bienvenido de nuevo: <?php echo $nom_Doc." ".$ape_Pat." ".$ape_Mat ?><br>
 				</div>
+			</div>
+		</div>
+
+
+		<div id="v-grupos" class="off">
+			<div id="grid-grupos">
+				
 			</div>
 		</div>
 
