@@ -180,6 +180,11 @@ i:active {
 	grid-column: 1;
 	overflow-y: overlay;
 	overflow-x: hidden;
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 1rem 0;
 }
 
 #alumnos
@@ -215,6 +220,11 @@ i:active {
 	grid-column: 1;
 	overflow-y: overlay;
 	overflow-x: hidden;
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 1rem 0;
 }
 
 #califs
@@ -335,6 +345,34 @@ input[type="button"]
 {
 	grid-column: 3;
 	grid-row: 5;
+}
+
+.divgrupo {
+	border: 2px #414e83 solid;
+    cursor: pointer;
+    height: fit-content;
+    width: 80%;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.divgrupo:hover {
+	background: #414e83;
+	color: white;
+}
+
+.divalum {
+	border: 2px #414e83 solid;
+	cursor: pointer;
+	height: fit-content;
+    width: 80%;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.divalum:hover {
+	background: #414e83;
+	color: white;
 }
 
 @keyframes anime

@@ -58,6 +58,7 @@
 
 
 		<div id="v-grupos" class="off">
+			<input type="hidden" value=<?php echo $user ?> id="id_docente">
 			<div id="grid-grupos">
 				<div id="materias">
 					<div id="titulo-materias">Grupos</div>
@@ -86,6 +87,7 @@
 					</div>
 				</div>
 			</div>
+			<script src="./js/grupos.js"></script>
 		</div>
 
 	</div>

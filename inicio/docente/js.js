@@ -36,5 +36,6 @@ let offAll = () => {
 	for (i of divs) {
 		$(i).removeClass();
 		$(i).css("display", "none");
+		$("#alums").empty();
 	}
 }
