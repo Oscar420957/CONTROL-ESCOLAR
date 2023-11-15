@@ -375,6 +375,11 @@ input[type="button"]
 	color: white;
 }
 
+.active {
+	background: #414e83;
+	color: white;
+}
+
 @keyframes anime
 {
 	from{

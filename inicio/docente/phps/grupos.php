@@ -31,7 +31,7 @@
 
 		# QUERY que obtiene los alumnos de las materias que da el docente
 		$query_alumnos_mats = "
-		select a.id_alumno, concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nom, m.nombre from alumno_materia as am, alumnos as a, grupo_alumno_mat as gam, grupo as g, materia as m where am.id_alumno = a.id_alumno and gam.id_alum_materia = am.id_alum_materia and am.id_materia = m.id_materia and gam.id_grupo = g.id_grupo and gam.id_grupo = ".$id_grupo." and m.id_materia = ".$id_materia;
+		select g.id_grupo, a.id_alumno, concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nom, m.nombre from alumno_materia as am, alumnos as a, grupo_alumno_mat as gam, grupo as g, materia as m where am.id_alumno = a.id_alumno and gam.id_alum_materia = am.id_alum_materia and am.id_materia = m.id_materia and gam.id_grupo = g.id_grupo and gam.id_grupo = ".$id_grupo." and m.id_materia = ".$id_materia;
 
 		$rs_alum = $conn->query($query_alumnos_mats);
 
@@ -39,10 +39,12 @@
 			$id_alumno = $fa->id_alumno;
 			$nomAlum = $fa->nom;
 			$matAlum = $fa->nombre;
+			$grupAlum = $fa->id_grupo;
 			array_push($alumnos_mat, ["$cc" => array(
 				"id_alumno" => $id_alumno,
 				"nomAlum" => $nomAlum,
-				"matAlum" => $matAlum
+				"matAlum" => $matAlum,
+				"idGrupAlum" => $grupAlum
 			)]);
 			$cc++;
 		}

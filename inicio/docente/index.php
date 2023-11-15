@@ -72,6 +72,7 @@
 					<div id="titulo-cali">Califiación</div>
 					<div id="calfs">
 						<form id="form-califs">
+							<input type="hidden" name="id_alumno" value="" id="id_alumno">
 							<input id="rP1" type="radio" name="parcial" value="1">
 							<label id="P1" for="iC1">Primer Parcial</label>
 							<input id="iC1" type="number" name="califiacion" required step=".01">
