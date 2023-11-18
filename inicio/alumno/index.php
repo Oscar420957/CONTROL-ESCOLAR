@@ -103,6 +103,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alumno | <?php echo $user;?></title>
 	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="../../css/css-menu.css">
 	<link rel="icon" href="./img/logo_octagon_short.png">
 	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -112,13 +113,18 @@
 <body>
 	<div id="container">
 		<nav id="menu">
-			<ul>
-				<li><i class="fa-solid fa-house" id="inicio"></i></li>
-				<li><i class="fa-solid fa-book" id="califs"></i></li>
-				<li><i class="fa-solid fa-check" id="lista"></i></li>
-				<li><i class="fa-solid fa-clock" id="horario"></i></li>
-				<li><i class="fas fa-sign-out-alt" id="salir"></i></li>
-			</ul>
+			<div id="iconos">
+				<i class="fa-solid fa-house" id="inicio"></i>
+				<div id="t-inicio">Inicio</div>
+				<i class="fa-solid fa-book" id="califs"></i>
+				<div id="t-califs">Calificaciones</div>
+				<i class="fa-solid fa-check" id="lista"></i>
+				<div id="t-lista">Asistencia</div>
+				<i class="fa-solid fa-clock" id="horario"></i>
+				<div id="t-horario">Horarios</div>
+				<i class="fas fa-sign-out-alt" id="salir"></i>
+				<div id="t-salir">Cerrar Sesión</div>
+			</div>
 		</nav>
 
 
@@ -155,7 +161,7 @@
 		<div id="v-lista" class="off">
 			<div id="title-lista"><h2>Consulta Asistencias</h2></div>
 			<div id="tab-asistencia">
-				<ul id="nav-materias"></ul>
+				<ul id="nav-materias" class="ul-css"></ul>
 				<div id="info-asistencia"></div>
 			</div>
 			<script src="./js/lista_asistencia.js"></script>

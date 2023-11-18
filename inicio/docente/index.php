@@ -30,6 +30,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="../../css/css-menu.css">
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 	<link rel="icon" href="../../img/CEUMHLOGOshort.png">
 	<title>Docente | <?php echo $user ?></title>
@@ -37,13 +38,18 @@
 <body>
 	<div id="container">
 		<nav id="menu">
-			<ul>
-				<li><i class="fa-solid fa-house" id="inicio"></i></li>
-				<li><i class="fa-solid fa-book" id="califs"></i></li>
-				<li><i class="fa-solid fa-check" id="lista"></i></li>
-				<li><i class="fa-solid fa-clock" id="horario"></i></li>
-				<li><i class="fas fa-sign-out-alt" id="salir"></i></li>
-			</ul>
+			<div id="iconos">
+				<i class="fa-solid fa-house" id="inicio"></i>
+				<div id="t-inicio">Inicio</div>
+				<i class="fa-solid fa-book" id="califs"></i>
+				<div id="t-califs">Calificaciones</div>
+				<i class="fa-solid fa-check" id="lista"></i>
+				<div id="t-lista">Asistencia</div>
+				<i class="fa-solid fa-clock" id="horario"></i>
+				<div id="t-horario">Horarios</div>
+				<i class="fas fa-sign-out-alt" id="salir"></i>
+				<div id="t-salir">Cerrar Sesión</div>
+			</div>
 		</nav>
 
 		<div id="v-inicio">
@@ -68,8 +74,8 @@
 					<div id="titulo-alu">Alumnos</div>
 					<div id="alums"></div>
 				</div>
-				<div id="califs">
-					<div id="titulo-cali">Califiación</div>
+				<div id="cals">
+					<div id="titulo-cali">Calificación</div>
 					<div id="calfs">
 						<form id="form-califs">
 							<input type="hidden" name="id_alumno" value="" id="id_alumno">
@@ -83,7 +89,6 @@
 							<label id="P3" for="iC3">Tercer Parcial</label>
 							<input id="iC3" type="number" name="califiacion" required step=".01">
 							<input id="guardar" type="button" name="guardar" value="Guardar">
-							<input id="modificar" type="button" name="modificar" value="Modificar">
 						</form>
 					</div>
 				</div>

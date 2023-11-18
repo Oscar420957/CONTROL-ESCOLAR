@@ -3,6 +3,21 @@ $(document).ready(() => {
 		offAll();
 		showInicio();
 	});
+	$("#iconos i").each((indx, elem) => {
+		let nom = ["inicio","califs","lista","horario","salir"];
+		$(elem).on("mouseover", () => {
+			$(`#t-${nom[indx]}`).css({
+				"opacity":"1",
+				"visibility":"visible"
+			});
+		});
+		$(elem).on("mouseout", () => {
+			$(`#t-${nom[indx]}`).css({
+				"opacity":"0",
+				"visibility":"hidden"
+			});	
+		});
+	});
 	$("#califs").on("click", () => {
 		offAll();
 		showGrupos();

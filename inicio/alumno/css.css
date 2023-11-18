@@ -16,20 +16,12 @@ html, body {
 	gap: 0 0.5rem; 	
 }
 
-#container > *:not(div) {
+#container > *:not(div,nav) {
 	display: flex;
 	flex-flow: row wrap;
 }
 
 
-
-
-#menu {
-	grid-column: 1;
-	justify-content: center;
-	align-content: center;
-	box-shadow: 5px 0 10px 0 rgba(0,0,0,0.6);
-}
 
 
 .off {
@@ -295,9 +287,7 @@ html, body {
 }
 
 
-
-
-ul {
+.ul-css {
 	list-style: none;
 	display: flex;
 	flex-flow: row wrap;
@@ -306,19 +296,6 @@ ul {
 	height: 70%;
 }
 
-i {
-	font-size: 2.5rem;
-}
-
-i:hover {
-	text-shadow: 2px 2px cyan;
-	cursor: pointer;
-}
-
-i:active {
-	color: cyan;
-	text-shadow: 2px 2px black;
-}
 
 h2 {
 	height: fit-content;
@@ -422,14 +399,6 @@ h2 {
 b
 {
 	margin: 0 30%;
-}
-
-#horario
-{
-	width: 100%;
-	height: 80%;
-	grid-column: 2;
-	justify-self: center;
 }
 
 table {

@@ -32,6 +32,7 @@ function llenar_grupos(respuesta) {
 	// ON CLICK de GRUPOS
 	$(document).on('click', '.divgrupo', function() {
 		$("#alums").empty();
+		$("#form-califs").css("display","none");
 		$("#iC1").val("");
 		$("#iC2").val("");
 		$("#iC3").val("");
@@ -63,6 +64,7 @@ function llenar_alumnos(respuesta, idGrupo, idMateria) {
 			$("#id_alumno").val(idAlum);
 			remove_class("divalum");
 			$(`#${idAlum}`).addClass("active");
+			$("#form-califs").css("display","grid");
 			
 			ver_calif_alum(idAlum, idMateria);
 		});

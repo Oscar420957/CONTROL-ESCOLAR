@@ -3,6 +3,22 @@ $(document).ready(() => {
 		offAll();
 		showInicio();
 	});
+
+	$("#iconos i").each((indx, elem) => {
+		let nom = ["inicio","califs","lista","horario","salir"];
+		$(elem).on("mouseover", () => {
+			$(`#t-${nom[indx]}`).css({
+				"opacity":"1",
+				"visibility":"visible"
+			});
+		});
+		$(elem).on("mouseout", () => {
+			$(`#t-${nom[indx]}`).css({
+				"opacity":"0",
+				"visibility":"hidden"
+			});	
+		});
+	});
 	$("#califs").on("click", () => {
 		offAll();
 		showCalifs();
@@ -23,23 +39,6 @@ let showInicio = () => {
 }
 let showCalifs = () => {
 	$("#v-califs").css("display", "grid");
-	/*let usuario = $("#user").val();
-	$.ajax({
-		url: "consultaCalifs.php",
-		method: "post",
-		data: {"user": usuario}, 
-		dataType: "json"
-	});
-	ajax.done(function(respuesta)
-		{
-			let acor = $("#acordeon");
-			for(let i in respuesta)
-			{
-				let contenido = "<div class="accordion-item"><div class="accordion-header">Título 1</div><div id="parciales"><div class="accordion-content" id="FP">Primer parcial</div><div class="accordion-content" id="SP">Segundo parcial</div><div class="accordion-content" id="TP">Tercer parcial</div></div>";
-				let div = $("<div> </div>").
-			}
-		});
-	console.log(user);*/
 }
 let showLista = () => {
 	$("#v-lista").css("display", "grid");

@@ -16,17 +16,11 @@ html, body {
 	gap: 0 0.5rem; 	
 }
 
-#container > *:not(div) {
+#container > *:not(div,nav) {
 	display: flex;
 	flex-flow: row wrap;
 }
 
-#menu {
-	grid-column: 1;
-	justify-content: center;
-	align-content: center;
-	box-shadow: 5px 0 10px 0 rgba(0,0,0,0.6);
-}
 
 .off {
 	display: none;
@@ -74,16 +68,6 @@ html, body {
 
 #datos {
 	padding: 2rem 1rem;
-}
-
-
-ul {
-	list-style: none;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	width: 50%;
-	height: 70%;
 }
 
 i {
@@ -227,7 +211,7 @@ i:active {
     gap: 1rem 0;
 }
 
-#califs
+#cals
 {
 	grid-column: 3;
 	width: 100%;
@@ -262,7 +246,7 @@ i:active {
 
 #form-califs
 {
-	display: grid;
+	display: none;
 	grid-template-columns: 5% repeat(2, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	height: 100%;
@@ -337,13 +321,7 @@ input[type="button"]
 
 #guardar
 {
-	grid-column: 2;
-	grid-row: 5;
-}
-
-#modificar
-{
-	grid-column: 3;
+	grid-column: 2 / 4;
 	grid-row: 5;
 }
 
