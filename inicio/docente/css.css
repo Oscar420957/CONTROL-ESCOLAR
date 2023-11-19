@@ -326,7 +326,7 @@ input[type="button"]
 }
 
 .divgrupo {
-	border: 2px #414e83 solid;
+	border: 2px #65962F solid;
     cursor: pointer;
     height: fit-content;
     width: 80%;
@@ -335,12 +335,12 @@ input[type="button"]
 }
 
 .divgrupo:hover {
-	background: #414e83;
+	background: #65962F;
 	color: white;
 }
 
 .divalum {
-	border: 2px #414e83 solid;
+	border: 2px #65962F solid;
 	cursor: pointer;
 	height: fit-content;
     width: 80%;
@@ -349,12 +349,12 @@ input[type="button"]
 }
 
 .divalum:hover {
-	background: #414e83;
+	background: #65962F;
 	color: white;
 }
 
 .active {
-	background: #414e83;
+	background: #447014;
 	color: white;
 }
 
