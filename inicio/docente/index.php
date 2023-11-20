@@ -90,6 +90,7 @@
 							<input id="iC3" type="number" name="califiacion" required step=".01">
 							<input id="guardar" type="button" name="guardar" value="Guardar">
 						</form>
+						<script type="text/javascript" src="./js/save_calif.js"></script>
 					</div>
 				</div>
 			</div>

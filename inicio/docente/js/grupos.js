@@ -28,7 +28,6 @@ function llenar_grupos(respuesta) {
 		grupo_mat.append(div);
 		c++;
 	}
-
 	// ON CLICK de GRUPOS
 	$(document).on('click', '.divgrupo', function() {
 		$("#alums").empty();
@@ -80,11 +79,18 @@ function ver_calif_alum(id, materia) {
 		dataType: "json"
 	});
 
+	$('#iC1').attr('data-idB', '0');
+	$('#iC2').attr('data-idB', '0');
+	$('#iC3').attr('data-idB', '0');
+
 	ajax_alum.done(function(respuesta) {
 		if (respuesta.length != 0) {
 			$("#iC1").val((respuesta[1] == -1) ? "0.0" : respuesta[1]);
+			$('#iC1').attr('data-idB', `${respuesta[0]}`);
 			$("#iC2").val((respuesta[4] == -1) ? "0.0" : respuesta[4]);
+			$('#iC2').attr('data-idB', `${respuesta[3]}`);
 			$("#iC3").val((respuesta[7] == -1) ? "0.0" : respuesta[7]);
+			$('#iC3').attr('data-idB', `${respuesta[6]}`);
 		} else {
 			$("#iC1").val("0.0");
 			$("#iC2").val("0.0");
@@ -96,6 +102,33 @@ function ver_calif_alum(id, materia) {
 		console.log(jqXHR);
 		console.log(status);
 	});
+
+			$('#rP1').prop('checked', false);
+			$('#rP2').prop('checked', false);
+			$('#rP3').prop('checked', false);
+			$('#iC1').attr('disabled', 'disabled');
+			$('#iC2').attr('disabled', 'disabled');
+			$('#iC3').attr('disabled', 'disabled');
+
+			$('#rP1').on('change', function()
+			{
+				$('#iC2').attr('disabled', 'disabled');
+				$('#iC3').attr('disabled', 'disabled');
+				$('#iC1').removeAttr('disabled');
+			});
+			$('#rP2').on('change', function()
+			{
+				$('#iC1').attr('disabled', 'disabled');
+				$('#iC3').attr('disabled', 'disabled');
+				$('#iC2').removeAttr('disabled');
+				
+			});
+			$('#rP3').on('change', function()
+			{
+				$('#iC1').attr('disabled', 'disabled');
+				$('#iC2').attr('disabled', 'disabled');
+				$('#iC3').removeAttr('disabled');
+			});
 }
 
 

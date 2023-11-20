@@ -334,6 +334,10 @@ input[type="button"]
     font-weight: bold;
 }
 
+.divgrupo:active:hover {
+	background: #447014;
+}
+
 .divgrupo:hover {
 	background: #65962F;
 	color: white;
@@ -346,6 +350,10 @@ input[type="button"]
     width: 80%;
     padding: 1rem;
     font-weight: bold;
+}
+
+.divalum:active:hover {
+	background: #447014;
 }
 
 .divalum:hover {
