@@ -169,6 +169,7 @@ i:active {
     justify-content: center;
     align-content: flex-start;
     gap: 1rem 0;
+    height: 95%;
 }
 
 #alumnos
@@ -209,6 +210,9 @@ i:active {
     justify-content: center;
     align-content: flex-start;
     gap: 1rem 0;
+    height: 95%;
+    opacity: 0;
+    transition: all 1s;
 }
 
 #cals
@@ -242,12 +246,13 @@ i:active {
 {
 	grid-row: 2;
 	grid-column: 1;
+	height: 95%;
 }
 
 #form-califs
 {
 	display: none;
-	grid-template-columns: 5% repeat(2, 1fr);
+	grid-template-columns: 10% 1fr 35%;
 	grid-template-rows: repeat(5, 1fr);
 	height: 100%;
 	justify-items: center;
@@ -257,6 +262,83 @@ i:active {
 input[type="number"]
 {
 	height: 2rem;
+	background: #447014;
+    border: 2px solid #65962F;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    color: white;
+    transition: all 1s;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+input[type="number"]:disabled {
+	background: #65962F;
+	transition: all 1s;
+	transform: scale(0.9);
+}
+
+input[type="number"]:focus {
+	outline: none;
+}
+
+
+/* CUSTOM RADIO STYLE */
+.radio {
+	-webkit-appearance: none;
+	display: block;
+	margin: 0.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	cursor: pointer;
+	vertical-align: middle;
+  	background-color: hsla(0,0%,0%,.75);
+	background-image: -webkit-radial-gradient( hsla(89,70%,90%,1) 0%, hsla(89,70%,70%,1) 15%, hsla(89,70%,60%,.3) 28%, hsla(89,70%,30%,0) 70% );
+	background-repeat: no-repeat;
+	-webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+	-webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+	outline: none;
+}
+
+.radio:checked {
+  	-webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+  	-webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+}
+
+.radio:active {
+  	-webkit-transform: scale(1.5);
+  	-webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+}
+
+
+/* The up/down direction logic */
+
+.radio, .radio:active {
+  background-position: 0 24px;
+}
+
+.radio:checked {
+  background-position: 0 0;
+}
+
+.radio:checked ~ .radio,
+.radio:checked ~ .radio:active {
+  background-position: 0 -24px;
+}
+
+/* FIN CUSTOM RADIO STYLE */
+
+label {
+	transition: all 0.4s;
+}
+
+.radio:checked + label {
+	text-shadow: #447014 1px 1px;
+	font-weight: bold;
+	font-size: 1.1rem;
+	transition: all 0.4s;
 }
 
 #iC1
@@ -323,6 +405,19 @@ input[type="button"]
 {
 	grid-column: 2 / 4;
 	grid-row: 5;
+	font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    border-radius: 15px;
+    border: none;
+    background: #447014;
+    color: white;
+    box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+#guardar:active {
+	box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.5);
 }
 
 .divgrupo {
@@ -332,6 +427,7 @@ input[type="button"]
     width: 80%;
     padding: 1rem;
     font-weight: bold;
+    border-radius: 15px;
 }
 
 .divgrupo:active:hover {
@@ -350,6 +446,7 @@ input[type="button"]
     width: 80%;
     padding: 1rem;
     font-weight: bold;
+    border-radius: 15px;
 }
 
 .divalum:active:hover {

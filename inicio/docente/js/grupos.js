@@ -38,7 +38,9 @@ function llenar_grupos(respuesta) {
 		let grupoMat = $(this).attr('id');
 		remove_class("divgrupo");
 		$(`#${grupoMat}`).addClass("active");
+		$("#alums").css("opacity","0");
 		llenar_alumnos(respuesta, grupoMat.split('_')[0], grupoMat.split('_')[1]);
+		$("#alums").css("opacity","1");
 	});
 }
 

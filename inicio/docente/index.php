@@ -13,14 +13,13 @@
 	#SELECT DATOS DE DOCENTE
 	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
-	$query = "select d.id_docente, d.nombre as nomDoc, d.apellido_Pat, d.apellido_Mat, m.id_materia, m.nombre, m.nivel_educativo, c.nombre, m.cuatrimestre, m.creditos from docentes as d, materia as m, carrera as c, materia_docente as md where md.id_docente = d.id_docente and md.id_materia = m.id_materia and m.carrera = c.id_carrera and d.id_docente = ".$user;
+	$query = "select d.id_docente, concat(d.nombre,' ',d.apellido_Pat,' ',d.apellido_Mat) as nombre from docentes as d where d.id_docente = ".$user;
 
 	$result = $conn->query($query);
 
 	while ($row = $result->fetch_object()) {
-		$nom_Doc = $row->nomDoc;
-		$ape_Pat = $row->apellido_Pat;
-		$ape_Mat = $row->apellido_Mat;
+		$id = $row->id_docente;
+		$nom = $row->nombre;
 	}
 ?>
 <!DOCTYPE html>
@@ -57,7 +56,8 @@
 			<div id="nom-alu">
 				<div id="border-top"></div>
 				<div id="datos">
-					Bienvenido de nuevo: <?php echo $nom_Doc." ".$ape_Pat." ".$ape_Mat ?><br>
+					Bienvenido de nuevo: <?php echo $nom ?><br>
+					Id Docente: <?php echo $id ?>
 				</div>
 			</div>
 		</div>
@@ -79,13 +79,13 @@
 					<div id="calfs">
 						<form id="form-califs">
 							<input type="hidden" name="id_alumno" value="" id="id_alumno">
-							<input id="rP1" type="radio" name="parcial" value="1">
+							<input id="rP1" type="radio" name="parcial" value="1" class="radio">
 							<label id="P1" for="iC1">Primer Parcial</label>
 							<input id="iC1" type="number" name="califiacion" required step=".01">
-							<input id="rP2" type="radio" name="parcial" value="2">
+							<input id="rP2" type="radio" name="parcial" value="2" class="radio">
 							<label id="P2" for="iC2">Segundo Parcial</label>
 							<input id="iC2" type="number" name="califiacion" required step=".01">
-							<input id="rP3" type="radio" name="parcial" value="3">
+							<input id="rP3" type="radio" name="parcial" value="3" class="radio">
 							<label id="P3" for="iC3">Tercer Parcial</label>
 							<input id="iC3" type="number" name="califiacion" required step=".01">
 							<input id="guardar" type="button" name="guardar" value="Guardar">
