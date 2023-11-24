@@ -366,6 +366,60 @@ input[type="button"]
 	color: white;
 }
 
+#v-horario {
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 25% 1fr 15%;
+	grid-template-rows: 1fr;
+	grid-column: 2;
+	height: 100%;
+	overflow-y: overlay;
+	overflow-x: hidden;
+}
+
+#hora {
+	width: fit-content;
+	padding: 0.5rem 4rem;
+}
+
+#horario {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+#tabla-materias
+{
+	grid-column: 1;
+    grid-row: 1;
+    height: fit-content;
+    margin: 0 5rem;
+}
+
+table {
+	border-spacing: 1rem;
+	font-weight: bold;
+}
+
+th,td
+{
+	padding: 0.5rem 2rem;
+	box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.3) !important;
+	border-radius: 10px;
+}
+
+tr {
+	background: rgba(0,0,0,0.2);
+}
+
+td
+{
+	text-align: center;
+}
+
+th {
+	background: rgba(0,0,0,0.3);
+}
+
 @keyframes anime
 {
 	from{

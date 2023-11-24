@@ -97,6 +97,130 @@
 			<script src="./js/grupos.js"></script>
 		</div>
 
+
+		<div id="v-horario" class="off">
+			<script src="./js/horario.js"></script>
+				<table id="horario">
+					<thead>
+						<th colspan="6"><b>HORARIO</b></th>
+						<tr>
+							<td id="hora">Hora</td>
+							<td>Lunes</td>
+							<td>Martes</td>
+							<td>Miercoles</td>
+							<td>Jueves</td>
+							<td>Viernes</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>07:00-08:00</td>
+							<td id="L07"></td>
+							<td id="M07"></td>
+							<td id="X07"></td>
+							<td id="J07"></td>
+							<td id="V07"></td>
+						</tr>
+						<tr>
+							<td>08:00-09:00</td>
+							<td id="L08"></td>
+							<td id="M08"></td>
+							<td id="X08"></td>
+							<td id="J08"></td>
+							<td id="V08"></td>
+						</tr>
+						<tr>
+							<td>09:00-10:00</td>
+							<td id="L09"></td>
+							<td id="M09"></td>
+							<td id="X09"></td>
+							<td id="J09"></td>
+							<td id="V09"></td>
+						</tr>
+						<tr>
+							<td>10:00-11:00</td>
+							<td id="L10"></td>
+							<td id="M10"></td>
+							<td id="X10"></td>
+							<td id="J10"></td>
+							<td id="V10"></td>
+						</tr>
+						<tr>
+							<td>11:00-12:00</td>
+							<td id="L11"></td>
+							<td id="M11"></td>
+							<td id="X11"></td>
+							<td id="J11"></td>
+							<td id="V11"></td>
+						</tr>
+						<tr>
+							<td>12:00-13:00</td>
+							<td id="L12"></td>
+							<td id="M12"></td>
+							<td id="X12"></td>
+							<td id="J12"></td>
+							<td id="V12"></td>
+						</tr>
+						<tr>
+							<td>13:00-14:00</td>
+							<td id="L13"></td>
+							<td id="M13"></td>
+							<td id="X13"></td>
+							<td id="J13"></td>
+							<td id="V13"></td>
+						</tr>
+						<tr>
+							<td>14:00-15:00</td>
+							<td id="L14"></td>
+							<td id="M14"></td>
+							<td id="X14"></td>
+							<td id="J14"></td>
+							<td id="V14"></td>
+						</tr>
+						<tr>
+							<td>15:00-16:00</td>
+							<td id="L15"></td>
+							<td id="M15"></td>
+							<td id="X15"></td>
+							<td id="J15"></td>
+							<td id="V15"></td>
+						</tr>
+						<tr>
+							<td>16:00-17:00</td>
+							<td id="L16"></td>
+							<td id="M16"></td>
+							<td id="X16"></td>
+							<td id="J16"></td>
+							<td id="V16"></td>
+						</tr>
+						<tr>
+							<td>17:00-18:00</td>
+							<td id="L17"></td>
+							<td id="M17"></td>
+							<td id="X17"></td>
+							<td id="J17"></td>
+							<td id="V17"></td>
+						</tr>
+						<tr>
+							<td>18:00-19:00</td>
+							<td id="L18"></td>
+							<td id="M18"></td>
+							<td id="X18"></td>
+							<td id="J18"></td>
+							<td id="V18"></td>
+						</tr>
+						<tr>
+							<td>19:00-20:00</td>
+							<td id="L19"></td>
+							<td id="M19"></td>
+							<td id="X19"></td>
+							<td id="J19"></td>
+							<td id="V19"></td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+
 	</div>
 	<script type="text/javascript" src="js.js"></script>
 </body>

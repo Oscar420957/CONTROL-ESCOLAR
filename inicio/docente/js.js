@@ -52,5 +52,7 @@ let offAll = () => {
 		$(i).removeClass();
 		$(i).css("display", "none");
 		$("#alums").empty();
+		$("#form-califs").css("display","none");
+		$(".divgrupo").each((i,e)=>{$(e).removeClass("active")});
 	}
 }
