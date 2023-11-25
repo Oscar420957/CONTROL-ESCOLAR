@@ -22,7 +22,7 @@ begin
     bucle: loop -- Begins a loop
 		fetch cursor1 into id_mat; -- Reads the first row of the cursor and stores the value into the variable
         
-        if done then -- Checks if the cursor has reached end
+        if fin then -- Checks if the cursor has reached end
 			leave bucle; -- Breaks the loop
 		end if;
         
