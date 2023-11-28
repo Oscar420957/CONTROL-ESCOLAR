@@ -56,7 +56,8 @@
 			<div id="nom-alu">
 				<div id="border-top"></div>
 				<div id="datos">
-					Bienvenido de nuevo: <?php echo $nom ?><br>
+					<h2>Bienvenido de nuevo</h2><br>
+					Docente: <?php echo $nom ?><br>
 					Id Docente: <?php echo $id ?>
 				</div>
 			</div>
@@ -66,18 +67,18 @@
 		<div id="v-grupos" class="off">
 			<input type="hidden" value=<?php echo $user ?> id="id_docente">
 			<div id="grid-grupos">
-				<div id="materias">
-					<div id="titulo-materias">Grupos</div>
-					<div id="grupo-mat"></div>
+				<div id="materias" class="div-grup-mat">
+					<div id="titulo-materias" class="div-title">Grupos</div>
+					<div id="grupo-mat" class="div-scroll-g-m"></div>
 				</div>
-				<div id="alumnos">
-					<div id="titulo-alu">Alumnos</div>
-					<div id="alums"></div>
+				<div id="alumnos" class="div-alum">
+					<div id="titulo-alu" class="div-title">Alumnos</div>
+					<div id="alums" class="div-scroll-alum"></div>
 				</div>
-				<div id="cals">
-					<div id="titulo-cali">Calificación</div>
-					<div id="calfs">
-						<form id="form-califs">
+				<div id="cals" class="div-califs">
+					<div id="titulo-cali" class="div-title">Calificación</div>
+					<div id="calfs" class="div-scroll-califs">
+						<form id="form-califs" class="form">
 							<input type="hidden" name="id_alumno" value="" id="id_alumno">
 							<input id="rP1" type="radio" name="parcial" value="1" class="radio">
 							<label id="P1" for="iC1">Primer Parcial</label>
@@ -88,13 +89,38 @@
 							<input id="rP3" type="radio" name="parcial" value="3" class="radio">
 							<label id="P3" for="iC3">Tercer Parcial</label>
 							<input id="iC3" type="number" name="califiacion" required step=".01">
-							<input id="guardar" type="button" name="guardar" value="Guardar">
+							<input id="guardar" class="save_btn" type="button" name="guardar" value="Guardar">
 						</form>
 						<script type="text/javascript" src="./js/save_calif.js"></script>
 					</div>
 				</div>
 			</div>
 			<script src="./js/grupos.js"></script>
+		</div>
+
+
+		<div id="v-lista" class="off">
+			<div id="grid-lista" class="grupos-lista">
+				<div id="div-g-m" class="div-grup-mat">
+					<div id="t-grupo" class="div-title">Grupos</div>
+					<div id="div-scroll-g-m" class="div-scroll-g-m"></div>
+				</div>
+				<div id="div-alum" class="div-alum">
+					<div id="t-alum" class="div-title">Alumnos</div>
+					<div id="div-scroll-alum" class="div-scroll-alum"></div>
+				</div>
+				<div id="div-attendance" class="div-califs">
+					<div id="t-attendance" class="div-title">Asistencia</div>
+					<div id="div-scroll-califs" class="div-scroll-califs">
+						<form id="form-lista" class="form">
+							<input type="hidden" name="id_alumno" value="" id="id_alumno">
+							
+							<input id="attendance" class="save_btn" type="button" name="guardar" value="Guardar">
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--script src="./js/lista.js"></script-->
 		</div>
 
 
