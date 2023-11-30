@@ -107,20 +107,13 @@
 				</div>
 				<div id="div-alum" class="div-alum">
 					<div id="t-alum" class="div-title">Alumnos</div>
-					<div id="div-scroll-alum" class="div-scroll-alum"></div>
-				</div>
-				<div id="div-attendance" class="div-califs">
-					<div id="t-attendance" class="div-title">Asistencia</div>
-					<div id="div-scroll-califs" class="div-scroll-califs">
-						<form id="form-lista" class="form">
-							<input type="hidden" name="id_alumno" value="" id="id_alumno">
-							
-							<input id="attendance" class="save_btn" type="button" name="guardar" value="Guardar">
-						</form>
+					<div id="div-scroll-alum">
+						"<input type="button" name="guardarAsis" id="gAsis" value="Guardar" class="save_btn">"
+						"<input type="date" name="fechaAsis" id="date">"
 					</div>
 				</div>
 			</div>
-			<!--script src="./js/lista.js"></script-->
+			<script type="text/javascript" src="./js/asisGrupos.js"></script>
 		</div>
 
 

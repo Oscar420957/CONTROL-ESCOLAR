@@ -52,8 +52,11 @@ let offAll = () => {
 		$(i).removeClass();
 		$(i).css("display", "none");
 		$("#alums").empty();
+		$("#div-scroll-alum").empty();
 		$("#alums").css("opacity","0");
+		$("#div-scroll-alum").css("opacity","0");
 		$("#form-califs").css("display","none");
 		$(".divgrupo").each((i,e)=>{$(e).removeClass("active")});
+		$(".divgrupos").each((i,e)=>{$(e).removeClass("active")});
 	}
 }
