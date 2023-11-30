@@ -108,8 +108,6 @@
 				<div id="div-alum" class="div-alum">
 					<div id="t-alum" class="div-title">Alumnos</div>
 					<div id="div-scroll-alum">
-						"<input type="button" name="guardarAsis" id="gAsis" value="Guardar" class="save_btn">"
-						"<input type="date" name="fechaAsis" id="date">"
 					</div>
 				</div>
 			</div>

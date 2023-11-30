@@ -54,7 +54,32 @@ function llenar_alum(respuesta, idGrupo, idMateria) {
 					"align-self": "flex-start",
 					"justify-self": "center"});
 			$("#div-scroll-alum").append(div);
+			crear_boton_as_alum(i[c].id_alumno, c);
 			c++;
 		}
 	}
+
+	boton_fecha_guardar($("#div-scroll-alum").children().length / 5);
+}
+
+function boton_fecha_guardar(gr) {
+	let year = new Date().getFullYear();
+	let month = new Date().getMonth() + 1;
+	let day = new Date().getDate();
+	let fecha = $(`<input type='date' name='fechaAs' id='date' style='grid-row: ${gr+1}' value='${year}-${month}-${day}'>`);
+	let guardar = $(`<input type='button' name='guardarAs' id='gAsis' value='Guardar' class='save_as' style='grid-row: ${gr+1}'>`);
+
+	fecha.on('change', (elem) => {
+		let val = elem.target.val();
+		$(elem.target).val(val);
+	});
+	$("#div-scroll-alum").append(fecha, guardar);
+}
+
+function crear_boton_as_alum(idAlu, row) {
+	let si = $(`<input type='radio' class='uno' name ='${idAlu}' data-id-al='${idAlu}' value='Presente' style='grid-column: 2; grid-row: ${row}; width: 1.5rem'>`);
+	let no = $(`<input type='radio' class='uno' name ='${idAlu}' data-id-al='${idAlu}' value='Ausente' style='grid-column: 3; grid-row: ${row}; width: 1.5rem'>`);
+	let siLabel = $(`<label for='${idAlu}' style='grid-column: 2; grid-row: ${row}; height: fit-content; width: fit-content'>Presente</label>`);
+	let noLabel = $(`<label for='${idAlu}' style='grid-column: 3; grid-row: ${row}; height: fit-content; width: fit-content'>Ausente</label>`);
+	$("#div-scroll-alum").append(si, siLabel, no, noLabel);
 }
