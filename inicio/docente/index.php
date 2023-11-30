@@ -31,6 +31,7 @@
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<link rel="stylesheet" type="text/css" href="../../css/css-menu.css">
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
+	<script type="text/javascript" src="./js/save_attendance.js"></script>
 	<link rel="icon" href="../../img/CEUMHLOGOshort.png">
 	<title>Docente | <?php echo $user ?></title>
 </head>
@@ -107,8 +108,7 @@
 				</div>
 				<div id="div-alum" class="div-alum">
 					<div id="t-alum" class="div-title">Alumnos</div>
-					<div id="div-scroll-alum">
-					</div>
+					<div id="div-scroll-alum"></div>
 				</div>
 			</div>
 			<script type="text/javascript" src="./js/asisGrupos.js"></script>

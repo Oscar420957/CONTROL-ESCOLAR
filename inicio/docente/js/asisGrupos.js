@@ -69,9 +69,21 @@ function boton_fecha_guardar(gr) {
 	let fecha = $(`<input type='date' name='fechaAs' id='date' style='grid-row: ${gr+1}' value='${year}-${month}-${day}'>`);
 	let guardar = $(`<input type='button' name='guardarAs' id='gAsis' value='Guardar' class='save_as' style='grid-row: ${gr+1}'>`);
 
+	guardar.on('click', () => {
+		let alumnos = $("#div-scroll-alum div");
+		let materia = $("#div-scroll-g-m .active");
+		let id_mat = materia[0].id.split("-")[1];
+		let idsAlumnos  = [];
+		for (let i of alumnos) {
+			idsAlumnos.push(i.id);
+		}
+		console.log($("#date").attr("value"));
+		check_all_radio(idsAlumnos, id_mat, $("#date").attr("value"));
+	});
+
 	fecha.on('change', (elem) => {
-		let val = elem.target.val();
-		$(elem.target).val(val);
+		let val = $(elem.target).val();
+		$("#date").attr("value",val);
 	});
 	$("#div-scroll-alum").append(fecha, guardar);
 }
