@@ -1,5 +1,5 @@
 function check_all_radio(ids, idMat, fecha) {
-	let allChecked = false;
+	let allChecked = true;
 	let asistencias = new Map();
 
 	for (let id of ids) {
@@ -10,7 +10,7 @@ function check_all_radio(ids, idMat, fecha) {
 				asistencias.set(id, $(elem).val());
 			}
 		});
-		allChecked = radioAlumno;
+		allChecked = allChecked && radioAlumno;
 	}
 
 	if (allChecked) {
