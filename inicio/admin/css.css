@@ -94,6 +94,14 @@ html, body {
 	animation-fill-mode: forwards;
 }
 
+#v-alumnos, #v-docentes, #v-admins, #v-materias {
+	grid-column: 2;
+	grid-row: 1;
+	height: 100%;
+}
+
+
+
 @font-face {
 	font-family: "Nunito";
 	src: url('../../fonts/Nunito-VariableFont_wght.ttf') format("truetype");
