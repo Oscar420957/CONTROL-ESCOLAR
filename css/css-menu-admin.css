@@ -1,0 +1,35 @@
+#inicio, #alumnos, #docentes, #admins, #materias, #salir {position: relative;}
+#alumnos:hover + #t-alumnos {display: block;}
+#docentes:hover + #t-docentes {display: block;}
+#admins:hover + #t-admins {display: block;}
+#materias:hover + #t-materias {display: block;}
+#salir:hover + #t-salir {display: block;}
+#t-inicio, #t-alumnos, #t-docentes, #t-admins, #t-materias, #t-salir {
+	display: block;
+	position: absolute;
+	padding: 5px;
+	z-index: 2;
+	left: 6%;
+	border: 1px solid #414E83;
+	background: rgba(65, 78, 131, 0.5);
+	height: fit-content;
+	font-size: 1.5rem;
+	font-weight: bold;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s ease-in-out;
+}
+#t-inicio {top: 2%;}
+#t-alumnos {top: 20%;}
+#t-docentes {top: 39%;}
+#t-admins {top: 56%;}
+#t-materias {top: 74%;}
+#t-salir {top: 91%;}
+i:hover {
+	text-shadow: 2px 2px crimson;
+	cursor: pointer;
+}
+i:active {
+	color: cyan;
+	text-shadow: 2px 2px crimson;
+}

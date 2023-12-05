@@ -4,7 +4,7 @@ $(document).ready(() => {
 		showInicio();
 	});
 	$("#iconos i").each((indx, elem) => {
-		let nom = ["inicio","califs","lista","horario","salir"];
+		let nom = ["inicio","alumnos","docentes","admins","materias","salir"];
 		$(elem).on("mouseover", () => {
 			$(`#t-${nom[indx]}`).css({
 				"opacity":"1",
@@ -18,13 +18,13 @@ $(document).ready(() => {
 			});	
 		});
 	});
-	$("#califs").on("click", () => {
+	$("#alumnos").on("click", () => {
 		offAll();
-		showGrupos();
+		showAlumnos();
 	});
-	$("#lista").on("click", () => {
+	$("#docentes").on("click", () => {
 		offAll();
-		showLista();
+		showDocentes();
 	});
 	$("#horario").on("click", () => {
 		offAll();
@@ -36,18 +36,24 @@ $(document).ready(() => {
 let showInicio = () => {
 	$("#v-inicio").css("display", "grid");
 }
-let showGrupos = () => {
-	$("#v-grupos").css("display", "grid");
+let showAlumnos = () => {
+	$("#v-alumnos").css("display", "grid");
 }
-let showLista = () => {
-	$("#v-lista").css("display", "grid");
+let showDocentes = () => {
+	$("#v-docentes").css("display", "grid");
+}
+let showAdmins = () => {
+	$("#v-admins").css("display", "grid");
+}
+let showMaterias = () => {
+	$("#v-materias").css("display", "grid");
 }
 let showHorario = () => {
 	$("#v-horario").css("display", "grid");
 }
 
 let offAll = () => {
-	let divs = ["#v-inicio","#v-grupos","#v-lista","#v-horario"];
+	let divs = ["#v-inicio","#v-alumnos","#v-docentes","#v-admins","#v-materias","#v-horario"];
 	for (i of divs) {
 		$(i).removeClass();
 		$(i).css("display", "none");
