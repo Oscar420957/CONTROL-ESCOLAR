@@ -73,5 +73,6 @@
 
 
 	</div>
+	<script type="text/javascript" src="./js/js.js"></script>
 </body>
 </html>

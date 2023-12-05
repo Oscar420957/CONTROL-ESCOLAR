@@ -1,7 +1,8 @@
 <?php
 
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 	$user = $_POST['user'];
+
+	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 #Terminan las funciones
 	$query_hor_mat = "select a.id_alumno, m.nombre, h.dia_semana, h.horario from alumnos as a, materia as m, alumno_materia as am, horarios as h where am.id_alumno = a.id_alumno and am.id_materia = m.id_materia and h.id_materia = m.id_materia and a.id_alumno = ".$user;
 

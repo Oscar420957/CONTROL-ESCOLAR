@@ -1,6 +1,6 @@
 delimiter //
 
-create trigger trg_add_cals_on_amcc before insert on alumno_materia
+create trigger trg_add_cals_on_amcc after insert on alumno_materia
 for each row
 begin
 	insert into alumno_materia_calif_cuatri(id_alumno_materia,parcial)

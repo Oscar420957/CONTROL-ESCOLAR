@@ -66,6 +66,10 @@ function boton_fecha_guardar(gr) {
 	let year = new Date().getFullYear();
 	let month = new Date().getMonth() + 1;
 	let day = new Date().getDate();
+
+	if (month >= 1 && month <= 9) month = `0${month}`;
+	if (day >= 1 && day <= 9) day = `0${day}`;
+
 	let fecha = $(`<input type='date' name='fechaAs' id='date' style='grid-row: ${gr+1}' value='${year}-${month}-${day}'>`);
 	let guardar = $(`<input type='button' name='guardarAs' id='gAsis' value='Guardar' class='save_as' style='grid-row: ${gr+1}'>`);
 

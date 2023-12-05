@@ -4,10 +4,11 @@ create procedure sp_registrar_alumno(in n varchar(50), in ap varchar(50), in am 
 begin
     -- Declares must go before anything 
     declare id_mat int;
+    declare var_final int default 0;
     
     -- Cursors ??
 	declare cursor1 cursor for select id_materia from materia where carrera = car and cuatrimestre = ctr; -- Fetches signatures for alumn regarding carrera and cuatrimestre
-    DECLARE CONTINUE HANDLER FOR NOT FOUND SET fin = true;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET var_final = 1;
     
 	-- Insert the new alumn into alumnos
 	insert into alumnos(nombre,apellido_pat,apellido_mat,nivel_educativo,carrera,cuatrimestre,grupo) values (n,ap,am,ne,car,ctr,g);
@@ -22,7 +23,7 @@ begin
     bucle: loop -- Begins a loop
 		fetch cursor1 into id_mat; -- Reads the first row of the cursor and stores the value into the variable
         
-        if fin then -- Checks if the cursor has reached end
+        if var_final = 1 then -- Checks if the cursor has reached end
 			leave bucle; -- Breaks the loop
 		end if;
         
@@ -31,7 +32,7 @@ begin
         # Trigger for alumno_materia to insert rows in alumno_materia_final (trg_add_cal_on_amf)
         
         # Call sp to insert rows in grupo_alumno_mat
-        call sp_bind_am_to_group(g,@id_new_alum); -- Arguments: id_grupo, id_alum_materia
+        # call sp_bind_am_to_group(g,@id_new_alum_mat); -- Arguments: id_grupo, id_alum_materia -> obtener el ultimo agregado
     end loop;
     close cursor1;
     
