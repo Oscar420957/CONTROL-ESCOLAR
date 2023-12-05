@@ -53,7 +53,7 @@
 				<i class="fa-solid fa-people-roof" id="admins"></i>
 				<div id="t-admins">Administrativos</div>
 				<i class="fa-solid fa-clock" id="materias"></i>
-				<div id="t-materias">Horario</div>
+				<div id="t-materias">Horarios</div>
 				<i class="fas fa-sign-out-alt" id="salir"></i>
 				<div id="t-salir">Cerrar Sesión</div>
 			</div>
