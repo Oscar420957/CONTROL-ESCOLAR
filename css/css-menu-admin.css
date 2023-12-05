@@ -30,6 +30,6 @@ i:hover {
 	cursor: pointer;
 }
 i:active {
-	color: cyan;
+	color: #7A5794;
 	text-shadow: 2px 2px crimson;
 }
