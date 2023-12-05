@@ -26,9 +26,13 @@ $(document).ready(() => {
 		offAll();
 		showDocentes();
 	});
+	$("#admins").on("click", () => {
+		offAll();
+		showAdmins();
+	});
 	$("#horario").on("click", () => {
 		offAll();
-		showHorario();
+		showMaterias();
 	});
 	$("#salir").on("click", () => window.location.assign("./phps/closeSession.php"));
 });
@@ -53,7 +57,7 @@ let showHorario = () => {
 }
 
 let offAll = () => {
-	let divs = ["#v-inicio","#v-alumnos","#v-docentes","#v-admins","#v-materias","#v-horario"];
+	let divs = ["#v-inicio","#v-alumnos","#v-docentes","#v-admins","#v-materias"];
 	for (i of divs) {
 		$(i).removeClass();
 		$(i).css("display", "none");

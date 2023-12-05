@@ -74,6 +74,16 @@
 		</div>
 
 
+		<div id="v-alumnos" class="off"></div>
+
+
+		<div id="v-docente" class="off"></div>
+
+
+		<div id="v-admin" class="off"></div>
+
+
+		<div id="v-materias" class="off"></div>
 
 	</div>
 	<script type="text/javascript" src="./js/js.js"></script>
