@@ -77,10 +77,76 @@
 		<div id="v-alumnos" class="off"></div>
 
 
-		<div id="v-docente" class="off"></div>
+		<div id="v-docentes" class="off">
+			<div id="grid-doc">
+				<div id="reg-doc" class="doc-divs">
+					<div class="div-title">Registrar Docente</div>
+					<div id="datos-doc" class="div-grey">
+						<form id="form-reg-doc" class="form-reg">
+							<label for="d-nom">
+								Nombre(s):<br>
+								<input type="text" name="d-nom" id="d-nom" placeholder="Nombre(s)" class="inputs">
+							</label>
+							<label for="d-ap-pat">
+								Apellido paterno:<br>
+								<input type="text" name="d-ap-pat" id="d-ap-pat" placeholder="Apellido paterno" class="inputs">
+							</label>
+							<label for="d-ap-mat">
+								Apellido materno:<br>
+								<input type="text" name="d-ap-mat" id="d-ap-mat" placeholder="Apellido materno" class="inputs">
+							</label>
+							<label for="hXd">
+								Horas por día:<br>
+								<input type="number" name="hXd" id="hXd" placeholder="Horas por día" min="2" max="8" class="inputs">
+							</label>
+							<label for="d-pass">
+								Contraseña para el nuevo docente:<br>
+								<input type="text" name="d-pass" id="d-pass" placeholder="Contraseña" minlength="8" maxlength="16" class="inputs">
+							</label>
+							<label for="d-pass-conf">
+								Confirme la contraseña:<br>
+								<input type="password" name="d-pass-conf" id="d-pass-conf" placeholder="Repita constraseña" minlength="8" maxlength="16" class="inputs">
+							</label>
+							<input type="button" name="d-guardar" id="d-guardar" value="Registrar" class="inputs button">
+							<input type="button" name="clear" id="clear" value="Limpiar" class="inputs button">
+						</form>
+						<script type="text/javascript" src="./js/register-doc.js"></script>
+					</div>
+				</div>
+
+				<div id="bind-doc-matgroup" class="doc-divs">
+					<div class="div-title">Materias | Grupos</div>
+					<div id="mats-groups" class="div-grey">
+						<form id="matgroup-by-docente" class="form-reg">
+							<label for="doc-to-bind">
+								Seleccione docente:<br>
+								<select name="doc-to-bind" id="doc-to-bind" class="inputs"></select>
+							</label>
+							<label for="mat-to-bind">
+								Materia por asignar al docente:<br>
+								<select name="mat-to-bind" id="mat-to-bind" class="inputs"></select>
+							</label>
+							<label for="gru-to-bind">
+								Grupo por asignar al docente:<br>
+								<select name="gru-to-bind" id="gru-to-bind" class="inputs"></select>
+							</label>
+							<input type="button" name="mat-by-doc-sav" id="mat-by-doc-sav" value="Asignar" class="inputs button">
+						</form>
+					</div>
+				</div>
 
 
-		<div id="v-admin" class="off"></div>
+				<div id="rmv-doc-mg" class="doc-divs">
+					<div class="div-title">Cambio Materia | Grupo</div>
+					<div id="rmv-mats-groups" class="div-grey">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="v-admins" class="off"></div>
 
 
 		<div id="v-materias" class="off"></div>

@@ -5,9 +5,7 @@
 	font-family: "Nunito";
 }
 
-html, body {
-	height: 100%;
-}
+html, body {height: 100%;}
 
 #container {
 	height: 100%;
@@ -22,9 +20,79 @@ html, body {
 }
 
 
-.off {
-	display: none;
+.off {display: none;}
+
+.div-title {
+	grid-row: 1;
+	grid-column: 1;
+	border-radius: 10px;
+	font-size: 2rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
 }
+
+#v-docentes .div-title {background-color: crimson;}
+
+.div-grey {
+	grid-column: 1;
+	grid-row: 2;
+	background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
+}
+
+.form-reg {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-size: 1.3rem;
+	padding: 1rem 2rem;
+}
+
+.inputs {
+	width: 100%;
+	font-size: 1.2rem;
+	border: none;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.6);
+	padding: 0.2rem 0.5rem;
+	transition: all 0.5s;
+}
+
+.inputs:focus:not(input[type='button']) {
+	outline: 2px solid crimson;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
+}
+
+.button {
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.7);
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+.button:active {
+	transform: scale(0.95);
+	background: crimson;
+	font-weight: bold;
+}
+
+.button:focus {outline: none}
+
+.doc-divs {
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 10% 1fr;
+	gap: 1rem 0;
+}
+
+.err {background: rgba(255,0,0,0.5) !important;}
 
 #v-inicio {
 	display: grid;
@@ -98,8 +166,36 @@ html, body {
 	grid-column: 2;
 	grid-row: 1;
 	height: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
 }
 
+#grid-doc {
+	grid-column: 1;
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	padding: 1.3rem;
+	gap: 0 1rem;
+}
+
+#reg-doc {grid-column: 1;}
+
+#v-docentes label {
+	width: 100%;
+}
+
+#d-guardar, #clear {
+	width: fit-content !important;
+	margin-left: 3rem;
+}
+
+#bind-doc-matgroup {grid-column: 2;}
+
+#v-docentes option {
+	background: crimson;
+}
 
 
 @font-face {
