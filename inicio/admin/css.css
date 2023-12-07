@@ -22,6 +22,15 @@ html, body {height: 100%;}
 
 .off {display: none;}
 
+.readonly {color: grey;}
+
+.readonly:hover {cursor: not-allowed;}
+
+.readonly:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
 .div-title {
 	grid-row: 1;
 	grid-column: 1;
@@ -36,6 +45,7 @@ html, body {height: 100%;}
 }
 
 #v-docentes .div-title {background-color: crimson;}
+#v-alumnos .div-title {background-color: darkseagreen;}
 
 .div-grey {
 	grid-column: 1;
@@ -53,6 +63,11 @@ html, body {height: 100%;}
 	height: 100%;
 	font-size: 1.3rem;
 	padding: 1rem 2rem;
+}
+
+#v-alumnos .form-reg {
+	justify-content: space-evenly;
+	margin: 0 0.1rem;
 }
 
 .inputs {
@@ -84,7 +99,7 @@ html, body {height: 100%;}
 
 .button:focus {outline: none}
 
-.doc-divs {
+.v-divs {
 	grid-row: 1;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -170,6 +185,27 @@ html, body {height: 100%;}
 	grid-template-rows: 1fr;
 }
 
+#grid-alu {
+	grid-column: 1;
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	padding: 1.3rem;
+	gap: 0 1rem;
+}
+
+#reg-alu {grid-column: 1;}
+
+#create-group {grid-column: 2;}
+
+#v-alumnos option {
+	background: lightseagreen;
+	font-size: 0.9rem;
+}
+
+#v-alumnos label {width: 45%;}
+
 #grid-doc {
 	grid-column: 1;
 	grid-row: 1;
@@ -182,9 +218,7 @@ html, body {height: 100%;}
 
 #reg-doc {grid-column: 1;}
 
-#v-docentes label {
-	width: 100%;
-}
+#v-docentes label {width: 100%;}
 
 #d-guardar, #clear {
 	width: fit-content !important;
@@ -193,9 +227,9 @@ html, body {height: 100%;}
 
 #bind-doc-matgroup {grid-column: 2;}
 
-#v-docentes option {
-	background: crimson;
-}
+#v-docentes option {background: crimson;}
+
+#rmv-doc-mg {grid-column: 3;}
 
 
 @font-face {

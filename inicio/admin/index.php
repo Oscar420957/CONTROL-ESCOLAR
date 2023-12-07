@@ -74,12 +74,70 @@
 		</div>
 
 
-		<div id="v-alumnos" class="off"></div>
+		<div id="v-alumnos" class="off">
+			<div id="grid-alu">
+				<div id="reg-alu" class="v-divs">
+					<div class="div-title">Registrar Alumno</div>
+					<div id="datos-alu" class="div-grey">
+						<form id="form-reg-alu" class="form-reg">
+							<label>
+								Nombre(s):<br>
+								<input type="text" name="al-nom" id="al-nom" placeholder="Nombre(s)" class="inputs">
+							</label>
+							<label>
+								Apellido paterno:<br>
+								<input type="text" name="al-ap-pat" id="al-ap-pat" placeholder="Apellido paterno" class="inputs">
+							</label>
+							<label>
+								Apellido materno:<br>
+								<input type="text" name="al-ap-mat" id="al-ap-mat" placeholder="Apellido materno" class="inputs">
+							</label>
+							<label>
+								Nivel educativo:<br>
+								<input type="text" name="al-ne" id="al-niv-e" value="Universidad" data-val="3" class="inputs readonly" readonly>
+							</label>
+							<label>
+								Carrera:<br>
+								<select id="carreras" name="al-car" class="inputs" style="font-size: 0.9rem;">
+									<option value="1">Ciencias Computacionales</option>
+									<option value="2">otra</option>
+								</select>
+							</label>
+							<label>
+								Cuatrimestre:<br>
+								<input type="number" name="al-ctr" id="al-ctr" placeholder="Cuatrimestre (1-9)" class="inputs" min="1" max="9">
+							</label>
+							<label>
+								Grupo:<br>
+								<input type="number" name="al-gru" id="al-gru" placeholder="Grupo en número (1-2)" class="inputs" min="1" max="2">
+							</label>
+							<label for="al-pass">
+								Contraseña alumno:<br>
+								<input type="text" name="al-pass" id="al-pass" placeholder="Contraseña" minlength="8" maxlength="16" class="inputs">
+							</label>
+							<label for="al-pass-conf">
+								Confirme la contraseña:<br>
+								<input type="password" name="al-pass-conf" id="al-pass-conf" placeholder="Repita constraseña" minlength="8" maxlength="16" class="inputs">
+							</label>
+							<input type="button" name="al-guardar" id="al-guardar" value="Registrar" class="inputs button">
+							<input type="button" name="clear" id="al-clear" value="Limpiar" class="inputs button">
+						</form>
+						<script type="text/javascript" src="./js/register-alu.js"></script>
+					</div>
+				</div>
+
+				<div id="create-group" class="v-divs">
+					<div class="div-title">Crear Grupo</div>
+					<div id="alus-grup" class="div-grey">
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 		<div id="v-docentes" class="off">
 			<div id="grid-doc">
-				<div id="reg-doc" class="doc-divs">
+				<div id="reg-doc" class="v-divs">
 					<div class="div-title">Registrar Docente</div>
 					<div id="datos-doc" class="div-grey">
 						<form id="form-reg-doc" class="form-reg">
@@ -114,7 +172,7 @@
 					</div>
 				</div>
 
-				<div id="bind-doc-matgroup" class="doc-divs">
+				<div id="bind-doc-matgroup" class="v-divs">
 					<div class="div-title">Materias | Grupos</div>
 					<div id="mats-groups" class="div-grey">
 						<form id="matgroup-by-docente" class="form-reg">
@@ -136,7 +194,7 @@
 				</div>
 
 
-				<div id="rmv-doc-mg" class="doc-divs">
+				<div id="rmv-doc-mg" class="v-divs">
 					<div class="div-title">Cambio Materia | Grupo</div>
 					<div id="rmv-mats-groups" class="div-grey">
 						
