@@ -13,7 +13,7 @@
 	# SELECT DATOS DE ALUMNO
 	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
-	$query = "select a.nombre as nomalu, a.cuatrimestre, a.grupo, a.foto, c.nombre as nomcar from alumnos as a, carrera as c where a.carrera = c.id_Carrera and id_alumno = ".$user;
+	$query = "select concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nomalu, a.cuatrimestre, a.grupo, a.foto, c.nombre as nomcar from alumnos as a, carrera as c where a.carrera = c.id_Carrera and id_alumno = ".$user;
 
 	$result = $conn->query($query);
 
@@ -133,6 +133,7 @@
 			<div id="nom-alu">
 				<div id="border-top"></div>
 				<div id="datos">
+					<h2>Bienvenido de nuevo</h2><br>
 					Alumno: <?php echo $nom_alu ?><br>
 					Número de cuenta: <?php echo $user ?><br>
 					Cuatrimestre: <?php echo $cua_alu ?><br>

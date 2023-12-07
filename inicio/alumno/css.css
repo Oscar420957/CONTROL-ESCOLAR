@@ -61,7 +61,7 @@ html, body {
 	gap: 5px 0;
 	border-left: solid 10px #25377f;
 	width: 60%;
-	height: fit-content;
+	height: 80%;
 	align-self: center;
 	border-radius: 0 5px 5px 0;
 	box-shadow: 5px 10px 10px 0 black;
@@ -130,8 +130,8 @@ html, body {
 #datos
 {
 	grid-row: 2;
-	margin-left: 5%;
-	font-size: 25px;
+	font-size: 1.2rem;
+	padding: 1rem;
 	font-weight: bold;
 }
 

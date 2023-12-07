@@ -52,8 +52,8 @@
 				<div id="t-docentes">Docentes</div>
 				<i class="fa-solid fa-people-roof" id="admins"></i>
 				<div id="t-admins">Administrativos</div>
-				<i class="fa-solid fa-clock" id="materias"></i>
-				<div id="t-materias">Horarios</div>
+				<!--i class="fa-solid fa-clock" id="materias"></i>
+				<div id="t-materias">Horarios</div-->
 				<i class="fas fa-sign-out-alt" id="salir"></i>
 				<div id="t-salir">Cerrar Sesión</div>
 			</div>
@@ -61,6 +61,7 @@
 
 
 		<div id="v-inicio">
+			<input type="hidden" name="super" id="super" value=<?php echo $super?>>
 			<div id="img-admi" style="background: url('./img/<?php echo $user.".jpg" ?>') no-repeat; background-size: cover;"></div>
 			<div id="nom-admi">
 				<div id="border-top"></div>
@@ -204,10 +205,43 @@
 		</div>
 
 
-		<div id="v-admins" class="off"></div>
+		<div id="v-admins" class="off">
+			<div id="grid-admin">
+				<div id="reg-admin" class="v-divs" style="grid-column: 1;">
+					<div class="div-title">Registrar Administrativo</div>
+					<div id="datos-admin" class="div-grey">
+						<form id="form-reg-adm" class="form-reg">
+							<label>
+								Nombre(s):<br>
+								<input type="text" name="ad-nom" id="ad-nom" placeholder="Nombre(s)" class="inputs">
+							</label>
+							<label>
+								Apellido paterno:<br>
+								<input type="text" name="ad-ap-pat" id="ad-ap-pat" placeholder="Apellido paterno" class="inputs">
+							</label>
+							<label>
+								Apellido materno:<br>
+								<input type="text" name="ad-ap-mat" id="ad-ap-mat" placeholder="Apellido materno" class="inputs">
+							</label>
+							<label for="d-pass">
+								Contraseña para el nuevo administrativo:<br>
+								<input type="text" name="ad-pass" id="ad-pass" placeholder="Contraseña" minlength="8" maxlength="16" class="inputs">
+							</label>
+							<label for="ad-pass-conf">
+								Confirme la contraseña:<br>
+								<input type="password" name="ad-pass-conf" id="ad-pass-conf" placeholder="Repita constraseña" minlength="8" maxlength="16" class="inputs">
+							</label>
+							<input type="button" name="ad-guardar" id="ad-guardar" value="Registrar" class="inputs button">
+							<input type="button" name="clear" id="ad-clear" value="Limpiar" class="inputs button">
+						</form>
+						<script type="text/javascript" src="./js/register-adm.js"></script>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
-		<div id="v-materias" class="off"></div>
+		<!--div id="v-materias" class="off"></div-->
 
 	</div>
 	<script type="text/javascript" src="./js/js.js"></script>

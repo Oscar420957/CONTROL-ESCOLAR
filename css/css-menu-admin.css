@@ -2,9 +2,9 @@
 #alumnos:hover + #t-alumnos {display: block;}
 #docentes:hover + #t-docentes {display: block;}
 #admins:hover + #t-admins {display: block;}
-#materias:hover + #t-materias {display: block;}
+/*#materias:hover + #t-materias {display: block;}*/
 #salir:hover + #t-salir {display: block;}
-#t-inicio, #t-alumnos, #t-docentes, #t-admins, #t-materias, #t-salir {
+#t-inicio, #t-alumnos, #t-docentes, #t-admins/*, #t-materias*/, #t-salir {
 	display: block;
 	position: absolute;
 	padding: 5px;
@@ -19,12 +19,12 @@
 	visibility: hidden;
 	transition: 0.5s ease-in-out;
 }
-#t-inicio {top: 2%;}
-#t-alumnos {top: 20%;}
-#t-docentes {top: 39%;}
-#t-admins {top: 56%;}
-#t-materias {top: 74%;}
-#t-salir {top: 91%;}
+#t-inicio {top: 4%;}
+#t-alumnos {top: 26%;}
+#t-docentes {top: 47%;}
+#t-admins {top: 69%;}
+/*#t-materias {top: 74%;}*/
+#t-salir {top: 90%;}
 i:hover {
 	text-shadow: 2px 2px crimson;
 	cursor: pointer;
