@@ -35,9 +35,9 @@
 	<link rel="stylesheet" type="text/css" href="../../css/css-menu.css">
 	<link rel="stylesheet" type="text/css" href="../../css/css-menu-admin.css">
 	<link rel="icon" href="../../img/CEUMHLOGOshort.png">
-	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+	<link rel="preconect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style"/>
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
 <body>
@@ -60,7 +60,7 @@
 		</nav>
 
 
-		<div id="v-inicio">
+		<div id="v-inicio" style="background: url('../../img/b-1.jpg'); background-size: 100% 100%">
 			<input type="hidden" name="super" id="super" value=<?php echo $super?>>
 			<div id="img-admi" style="background: url('./img/<?php echo $user.".jpg" ?>') no-repeat; background-size: cover;"></div>
 			<div id="nom-admi">

@@ -97,7 +97,7 @@
 	mysqli_close($conn);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -105,9 +105,9 @@
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<link rel="stylesheet" type="text/css" href="../../css/css-menu.css">
 	<link rel="icon" href="./img/logo_octagon_short.png">
-	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous" defer></script>
+	<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script-->
+	<link rel="preconect" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style"/>
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
 <body>
@@ -128,7 +128,7 @@
 		</nav>
 
 
-		<div id="v-inicio">
+		<div id="v-inicio" style="background: url('../../img/b-1.jpg'); background-size: 100% 100%">
 			<div id="img-alu" style="background: url('./img/<?php echo $user.".jpg" ?>') no-repeat; background-size: cover;"></div>
 			<div id="nom-alu">
 				<div id="border-top"></div>
@@ -144,7 +144,7 @@
 		</div>
 
 
-		<div id="v-califs" class="off">
+		<div id="v-califs" class="off" style="background: url('../../img/b-2.jpg'); background-size: 100% 100%">
 			<input type="text" name="user" id="user" value=<?php echo $user; ?> style="display: none;">
 			<div id="title"><h1>Calificaciones Por Materia</h1></div>
 			<div id="tab-calif">
@@ -159,7 +159,7 @@
 		</div>
 
 
-		<div id="v-lista" class="off">
+		<div id="v-lista" class="off" style="background: url('../../img/b-3.jpg'); background-size: 100% 100%">
 			<div id="title-lista"><h2>Consulta Asistencias</h2></div>
 			<div id="tab-asistencia">
 				<ul id="nav-materias" class="ul-css"></ul>
@@ -169,7 +169,7 @@
 		</div>
 
 
-		<div id="v-horario" class="off">
+		<div id="v-horario" class="off" style="background: url('../../img/b-4.jpg'); background-size: 100% 100%">
 			<script src="./js/horario.js"></script>
 				<table id="horario">
 					<thead>

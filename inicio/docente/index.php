@@ -27,7 +27,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/b32a76d93a.js" crossorigin="anonymous" defer></script>
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<link rel="stylesheet" type="text/css" href="../../css/css-menu.css">
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
@@ -51,7 +51,7 @@
 			</div>
 		</nav>
 
-		<div id="v-inicio">
+		<div id="v-inicio" style="background: url('../../img/b-1.jpg'); background-size: 100% 100%">
 			<div id="img-alu" style="background: url('./img/<?php echo $user.".jpg" ?>') no-repeat; background-size: cover;"></div>
 			<div id="nom-alu">
 				<div id="border-top"></div>

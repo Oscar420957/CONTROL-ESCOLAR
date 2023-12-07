@@ -53,7 +53,7 @@
 		}
 	</style>
 </head>
-<body>
+<body style="background: url(./img/b-9.jpg) no-repeat;background-position: 50% 85%;background-size: 60% 100%;">
 		<header>
 			<div id="head">
 				CENTRO UNIVERSITARIO METROPOLITANO DE HIDALGO

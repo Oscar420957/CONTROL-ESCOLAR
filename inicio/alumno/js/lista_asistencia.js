@@ -47,7 +47,10 @@ ajaxLista.done(function(respuesta) {
 	for (let i of arreglo_materias) {
 		$(`#${i.substring(0,2)}`).on('click', () => {
 			off_color();
-			$(`#${i.substring(0,2)}`).css("background","rgba(0,0,0,0.4)");
+			$(`#${i.substring(0,2)}`).css({
+				"background":"rgba(0,0,0,0.8)",
+				"transform":"scale(0.90)"
+			});
 			$('#info-asistencia').empty();
 			//llenar_div(info_pase_lista, i);
 			fill_tab_attend(info_pase_lista, i);
@@ -64,7 +67,10 @@ ajaxLista.fail(function(jqXHR, status) {
 function off_color() {
 	let lis = $('#nav-materias li');
 	lis.each(function(indx, elem) {
-		$(elem).css("background","rgba(0,0,0,0.2)");
+		$(elem).css({
+			"background":"rgba(0,0,0,0.5)",
+			"transform":"scale(1.0)"
+		});
 	});
 }
 
@@ -78,8 +84,11 @@ function llenar_lis(arreglo_mat) {
 			"height":"100%",
 			"padding":"0 1rem",
 			"cursor":"pointer",
-			"background":"rgba(0,0,0,0.2)",
-			"box-shadow":"1px 1px 10px 0 rgba(0,0,0,0.3)"
+			"background":"rgba(0,0,0,0.5)",
+			"box-shadow":"0 0 10px 3px rgba(0,0,0,0.5)",
+			"font-weight":"bold",
+			"transition":"all 0.5s",
+			"color":"white"
 		});
 		li.html(mat);
 		nav_mat.append(li);

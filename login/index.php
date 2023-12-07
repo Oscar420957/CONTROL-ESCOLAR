@@ -16,10 +16,10 @@
 	<title>Inicio de Sesión | <?php echo ucfirst($userType) ?></title>
 	<link rel="stylesheet" type="text/css" href="../css/css-logins.css">
 	<link rel="icon" href="../img/CEUMHLOGOshort.png">
-	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+	<link rel="stylesheet" href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 	<script type="text/javascript" src="../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
 </head>
-<body>
+<body style="background: url(../img/b-9.jpg) no-repeat;background-position: 50% 85%;background-size: 60% 100%;">
 		<header>
 			<div id="head">
 				CENTRO UNIVERSITARIO METROPOLITANO DE HIDALGO
