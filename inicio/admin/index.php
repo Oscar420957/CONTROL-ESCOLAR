@@ -8,10 +8,11 @@
 		header('Location: ../../');
 	}
 
+	require "../../db/db.php";
 	$user = $_SESSION['usersession'];
 
 
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 	
 	#SELECT DATOS DE ADMIN
 	$query = "select id_admin, concat(nombre,' ',apellido_pat,' ',apellido_mat) as nom, top_level_acc as super from administrativo where id_admin = $user";
@@ -207,7 +208,7 @@
 
 		<div id="v-admins" class="off">
 			<div id="grid-admin">
-				<div id="reg-admin" class="v-divs" style="grid-column: 1;">
+				<div id="reg-admin" class="v-divs">
 					<div class="div-title">Registrar Administrativo</div>
 					<div id="datos-admin" class="div-grey">
 						<form id="form-reg-adm" class="form-reg">

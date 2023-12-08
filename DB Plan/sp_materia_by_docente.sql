@@ -6,7 +6,7 @@ begin
 	set @id_new_md = last_insert_id();
     
     # Call sp to insert rows in grupo_docente_mat
-    call sp_bind_md_to_group(id_grup,@id_new_md);
+    # call sp_bind_md_to_group(id_grup,@id_new_md);
 end //
 
 delimiter ;

@@ -40,7 +40,7 @@ main
 
 #img1
 {
-	background-image: url("../img/school.png");
+	background-image: url("../img/school.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 20%;
@@ -50,7 +50,7 @@ main
 }
 #img2
 {
-	background-image: url("../img/school.png");
+	background-image: url("../img/school.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 20%;

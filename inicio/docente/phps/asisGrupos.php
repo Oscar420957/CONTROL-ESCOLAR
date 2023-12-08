@@ -1,7 +1,8 @@
 <?php
 	$id_docente = $_POST['id_docente'];
 
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+	require "../../../db/db.php";
+	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 	# QUERY que obtiene los grupos a los que da materias el docente
 	$query_grupos = "

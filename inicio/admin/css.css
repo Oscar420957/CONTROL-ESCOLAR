@@ -251,15 +251,14 @@ html, body {height: 100%;}
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
-	padding: 3rem 5rem;
-	gap: 0 1rem;
+	padding: 4rem;
 }
 
 #v-admins label {width: 45%;}
 
-#ad-guardar, #ad-clear {
-	width: 50%;
-}
+#ad-guardar, #ad-clear {width: 50%;}
+
+#reg-admin {grid-column: 1;}
 
 
 @font-face {

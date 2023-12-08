@@ -3,7 +3,8 @@
 	$id_alumno = $_POST['id_alumno'];
 	$id_materia = $_POST['id_materia'];
 
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+	require "../../../db/db.php";
+	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 	# QUERY que obtiene el id_alum_materia
 	$query_am = "select id_alum_materia from alumno_materia where id_alumno = ".$id_alumno." and id_materia = ".$id_materia;

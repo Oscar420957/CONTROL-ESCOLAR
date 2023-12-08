@@ -68,9 +68,9 @@ let offAll = () => {
 function check_super_admin() {
 	if ($("#super").val() == 0) {
 		$("#admins").css("display","none");
-		$("#t-inicio").css("top","7% !important");
-		$("#t-alumnos").css("top","33% !important");
-		$("#t-docentes").css("top","60% !important");
-		$("#t-salir").css("top","87% !important");
+		$("#t-inicio").css("top","7%");
+		$("#t-alumnos").css("top","33%");
+		$("#t-docentes").css("top","60%");
+		$("#t-salir").css("top","87%");
 	}
 }

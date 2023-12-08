@@ -4,7 +4,8 @@
 	$asistencia = $_POST['asistencia'];
 	$fecha = $_POST['fecha'];
 
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+	require "../../../db/db.php";
+	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 	# QUERY para obtener el id de alumno_materia
 	$query_id_am = "select id_alum_materia from alumno_materia where id_alumno = ".$id_alumno." and id_materia = ".$id_materia;
@@ -26,5 +27,7 @@
 	} else {
 		echo json_encode(array("res" => "noguardado"));
 	}
+
+	$conn->close();
 
 ?>

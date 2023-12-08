@@ -8,7 +8,7 @@ let ajaxHorario = $.ajax({
 		});
 
 ajaxHorario.done(function(respuesta) {
-	let colors = ['red','orange','purple','lime','cyan','blue','yellow','brown','pink','crimson'];
+	let colors = ['red','orange','mediumpurple','lime','cyan','blue','yellow','brown','pink','crimson'];
 	let mapColors = new Map();
 
 	let cont = 1;

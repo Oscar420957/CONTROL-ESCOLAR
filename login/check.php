@@ -1,12 +1,13 @@
 <?php 
 
 session_start();
+require "../db/db.php";
 
 $user = $_POST['user'];
 $pass = $_POST['password'];
 $userType = $_POST['user-type'];
 
-$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 switch ($userType) {
 	case 'alumno':

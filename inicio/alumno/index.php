@@ -10,8 +10,9 @@
 
 	$user = $_SESSION['usersession'];
 
+	require "../../db/db.php";
 	# SELECT DATOS DE ALUMNO
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 	$query = "select concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nomalu, a.cuatrimestre, a.grupo, a.foto, c.nombre as nomcar from alumnos as a, carrera as c where a.carrera = c.id_Carrera and id_alumno = ".$user;
 

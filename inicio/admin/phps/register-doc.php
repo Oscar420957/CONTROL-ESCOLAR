@@ -5,7 +5,8 @@
 	$hXd = $_POST['hXd'];
 	$pass = $_POST['d-pass-conf'];
 
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+	require "../../../db/db.php";
+	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 	# PPREPARED STATEMENT
 	$ps = $conn->prepare("call sp_registrar_docente(?,?,?,?,?,@id)");

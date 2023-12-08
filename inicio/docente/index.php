@@ -10,8 +10,9 @@
 
 	$user = $_SESSION['usersession'];
 
+	require "../../db/db.php";
 	#SELECT DATOS DE DOCENTE
-	$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
+	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
 	$query = "select d.id_docente, concat(d.nombre,' ',d.apellido_Pat,' ',d.apellido_Mat) as nombre from docentes as d where d.id_docente = ".$user;
 
@@ -31,6 +32,7 @@
 	<link rel="stylesheet" type="text/css" href="css.css">
 	<link rel="stylesheet" type="text/css" href="../../css/css-menu.css">
 	<script type="text/javascript" src="../../jquery/code.jquery.com_jquery-3.7.0.min.js"></script>
+	<script type="text/javascript" src="./js/save_attendance.js"></script>
 	<link rel="icon" href="../../img/CEUMHLOGOshort.png">
 	<title>Docente | <?php echo $user ?></title>
 </head>
@@ -114,7 +116,7 @@
 		</div>
 
 
-		<div id="v-horario" class="off">
+		<div id="v-horario" class="off" style="background: url('../../img/b-4.jpg'); background-size: 100% 100%">
 			<script src="./js/horario.js"></script>
 				<table id="horario">
 					<thead>
