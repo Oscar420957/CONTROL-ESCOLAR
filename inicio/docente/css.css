@@ -439,6 +439,18 @@ input[type="button"]
 	background-color: lightgrey;
 }
 
+.date {
+	background-color: #7b2cbf;
+	font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  width: fit-content !important;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  box-shadow: 5px 5px 9px 0px rgba(0,0,0,0.5);
+  cursor: pointer;
+} 
+
 .save_as:disabled:hover {
 	cursor: help;
 }
@@ -547,6 +559,8 @@ input[type="button"]
   cursor: pointer;
 }
 
+#date:focus {outline: none;}
+
 
 #v-horario {
 	justify-content: center;
@@ -557,6 +571,12 @@ input[type="button"]
 	height: 100%;
 	overflow-y: overlay;
 	overflow-x: hidden;
+}
+
+#v-horario::-webkit-scrollbar {width: 10px;}
+#v-horario::-webkit-scrollbar-thumb {
+	background: rgba(0,0,0,0.5);
+	border-radius: 10px;
 }
 
 #hora {

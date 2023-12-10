@@ -266,20 +266,29 @@ html, body {
 }
 
 #info-asistencia {
+	grid-column: 1;
 	grid-row: 2;
 	width: fit-content;
-	height: fit-content;
+	height: 25rem;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	align-content: center;
-	background-color: rgba(255,255,255,0.9);
-    border-radius: 10px;	
+    border-radius: 10px;
+    overflow: overlay;	
 }
 
-#info-asistencia > * {
+#info-asistencia::-webkit-scrollbar {width: 7px;}
+#v-horario::-webkit-scrollbar {width: 10px;}
+
+#info-asistencia::-webkit-scrollbar-thumb,
+#v-horario::-webkit-scrollbar-thumb {
+	background: rgba(0,0,0,0.5);
+	border-radius: 10px;
+}
+
+#info-asistencia table {
+	background: rgba(255,255,255,0.9);
 	height: fit-content;
-	width: fit-content;
 }
 
 
@@ -435,6 +444,7 @@ tr {
 td
 {
 	text-align: center;
+	height: fit-content;
 }
 
 th {

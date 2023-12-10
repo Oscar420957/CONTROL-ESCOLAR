@@ -68,7 +68,7 @@
 
 		<div id="v-grupos" class="off">
 			<input type="hidden" value=<?php echo $user ?> id="id_docente">
-			<div id="grid-grupos">
+			<div id="grid-grupos" style="background: url('../../img/b-11.jpg'); background-size: 110% 120%; background-position: 50% 60%;">
 				<div id="materias" class="div-grup-mat">
 					<div id="titulo-materias" class="div-title">Grupos</div>
 					<div id="grupo-mat" class="div-scroll-g-m"></div>
@@ -102,7 +102,7 @@
 
 
 		<div id="v-lista" class="off">
-			<div id="grid-lista" class="grupos-lista">
+			<div id="grid-lista" class="grupos-lista" style="background: url('../../img/b-13.jpg'); background-size: 150% 180%; background-position: 50% 60%;">
 				<div id="div-g-m" class="div-grup-mat">
 					<div id="t-grupo" class="div-title">Grupos</div>
 					<div id="div-scroll-g-m" class="div-scroll-g-m"></div>

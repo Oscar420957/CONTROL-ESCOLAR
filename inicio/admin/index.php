@@ -102,16 +102,15 @@
 								Carrera:<br>
 								<select id="carreras" name="al-car" class="inputs" style="font-size: 0.9rem;">
 									<option value="1">Ciencias Computacionales</option>
-									<option value="2">otra</option>
 								</select>
 							</label>
 							<label>
 								Cuatrimestre:<br>
-								<input type="number" name="al-ctr" id="al-ctr" placeholder="Cuatrimestre (1-9)" class="inputs" min="1" max="9">
+								<input type="number" name="al-ctr" id="al-ctr" placeholder="Cuatrimestre (1-5)" class="inputs" min="1" max="5">
 							</label>
 							<label>
 								Grupo:<br>
-								<input type="number" name="al-gru" id="al-gru" placeholder="Grupo en número (1-2)" class="inputs" min="1" max="2">
+								<input type="number" name="al-gru" id="al-gru" placeholder="Grupo en número (1-2)" class="inputs readonly" min="1" max="2" value="1" readonly>
 							</label>
 							<label for="al-pass">
 								Contraseña alumno:<br>
@@ -128,7 +127,7 @@
 					</div>
 				</div>
 
-				<div id="create-group" class="v-divs">
+				<div id="create-group" class="v-divs" style="display: none">
 					<div class="div-title">Crear Grupo</div>
 					<div id="alus-grup" class="div-grey">
 					</div>
@@ -174,7 +173,7 @@
 					</div>
 				</div>
 
-				<div id="bind-doc-matgroup" class="v-divs">
+				<div id="bind-doc-matgroup" class="v-divs" style="display: none">
 					<div class="div-title">Materias | Grupos</div>
 					<div id="mats-groups" class="div-grey">
 						<form id="matgroup-by-docente" class="form-reg">
@@ -196,7 +195,7 @@
 				</div>
 
 
-				<div id="rmv-doc-mg" class="v-divs">
+				<div id="rmv-doc-mg" class="v-divs" style="display: none">
 					<div class="div-title">Cambio Materia | Grupo</div>
 					<div id="rmv-mats-groups" class="div-grey">
 						
