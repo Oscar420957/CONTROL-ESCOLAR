@@ -46,17 +46,26 @@ function llenar_alum(respuesta, idGrupo, idMateria) {
 
 	let c = 1;
 	for (let i of arr2) {
-		if (i[c].idGrupAlum == idGrupo) {
+		for (let nums in i) {
+			if (i[nums]["idGrupAlum"] == idGrupo && i[nums]["id_materia"] == idMateria) {
+				let div = $(`<div id='${i[nums]["id_alumno"]}'></div>`);
+				div.html(`${i[nums]["nomAlum"]}`);
+				div.addClass("divalums");
+				div.css({"grid-column": "1",
+					"align-self": "flex-start",
+					"justify-self": "center"});
+				$("#div-scroll-alum").append(div);
+				crear_boton_as_alum(i[nums]["id_alumno"], c);
+				c++;
+			}
+		}
+		/*if (i[c].idGrupAlum == idGrupo) {
 			let div = $(`<div id='${i[c].id_alumno}'></div>`);
 			div.html(`${i[c].nomAlum}`);
 			div.addClass("divalums");
-			div.css({"grid-column": "1",
-					"align-self": "flex-start",
-					"justify-self": "center"});
+			
 			$("#div-scroll-alum").append(div);
-			crear_boton_as_alum(i[c].id_alumno, c);
-			c++;
-		}
+		}*/
 	}
 
 	boton_fecha_guardar($("#div-scroll-alum").children().length / 5);

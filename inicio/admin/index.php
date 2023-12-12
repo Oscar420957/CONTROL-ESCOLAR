@@ -127,7 +127,7 @@
 					</div>
 				</div>
 
-				<div id="create-group" class="v-divs" style="display: none">
+				<div id="create-group" class="v-divs">
 					<div class="div-title">Crear Grupo</div>
 					<div id="alus-grup" class="div-grey">
 					</div>
@@ -173,8 +173,8 @@
 					</div>
 				</div>
 
-				<div id="bind-doc-matgroup" class="v-divs" style="display: none">
-					<div class="div-title">Materias | Grupos</div>
+				<div id="bind-doc-matgroup" class="v-divs">
+					<div class="div-title">Docente | Materia</div>
 					<div id="mats-groups" class="div-grey">
 						<form id="matgroup-by-docente" class="form-reg">
 							<label for="doc-to-bind">
@@ -185,20 +185,34 @@
 								Materia por asignar al docente:<br>
 								<select name="mat-to-bind" id="mat-to-bind" class="inputs"></select>
 							</label>
+							<input type="button" name="mat-by-doc-sav" id="mat-by-doc-sav" value="Asignar" class="inputs button">
+						</form>
+					</div>
+					<script type="text/javascript" src="./js/docentes-mat.js"></script>
+				</div>
+
+
+				<div id="rmv-doc-mg" class="v-divs">
+					<div class="div-title">Docente | Grupo</div>
+					<div id="rmv-mats-groups" class="div-grey">
+						<form id="form-cre-gru" class="form-reg">
+							<label for="doc-to-bind-g">
+								Seleccione docente:<br>
+								<select name="doc-to-bind-g" id="doc-to-bind-g" class="inputs"></select>
+							</label>
+							<label for="from-carrera">
+								Mostrar grupos de la carrera:<br>
+								<select name="from-carrera" id="from-carrera" class="inputs" disabled>
+									<option value="1">Ciencias Computacionales</option>
+								</select>
+							</label>
 							<label for="gru-to-bind">
 								Grupo por asignar al docente:<br>
 								<select name="gru-to-bind" id="gru-to-bind" class="inputs"></select>
 							</label>
-							<input type="button" name="mat-by-doc-sav" id="mat-by-doc-sav" value="Asignar" class="inputs button">
+							<input type="button" name="md-sav" id="md-sav" value="Asignar Grupo" class="inputs button">
 						</form>
-					</div>
-				</div>
-
-
-				<div id="rmv-doc-mg" class="v-divs" style="display: none">
-					<div class="div-title">Cambio Materia | Grupo</div>
-					<div id="rmv-mats-groups" class="div-grey">
-						
+						<script type="text/javascript" src="./js/docentes-grup.js"></script>
 					</div>
 				</div>
 			</div>

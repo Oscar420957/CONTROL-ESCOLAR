@@ -17,7 +17,7 @@
 	$alumnos_mat = array();
 
 	$c = 1;
-	$cc = 1;
+	$cc = 0;
 	while ($fg = $rs_grupos->fetch_object()) {
 		$id_grupo = $fg->id_grupo;
 		$grupo = $fg->grupo;
@@ -32,18 +32,20 @@
 
 		# QUERY que obtiene los alumnos de las materias que da el docente
 		$query_alumnos_mats = "
-		select g.id_grupo, a.id_alumno, concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nom, m.nombre from alumno_materia as am, alumnos as a, grupo_alumno_mat as gam, grupo as g, materia as m where am.id_alumno = a.id_alumno and gam.id_alum_materia = am.id_alum_materia and am.id_materia = m.id_materia and gam.id_grupo = g.id_grupo and gam.id_grupo = ".$id_grupo." and m.id_materia = ".$id_materia;
+		select g.id_grupo, a.id_alumno, concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nom, m.id_materia, m.nombre from alumno_materia as am, alumnos as a, grupo_alumno_mat as gam, grupo as g, materia as m where am.id_alumno = a.id_alumno and gam.id_alum_materia = am.id_alum_materia and am.id_materia = m.id_materia and gam.id_grupo = g.id_grupo and gam.id_grupo = ".$id_grupo." and m.id_materia = ".$id_materia;
 
 		$rs_alum = $conn->query($query_alumnos_mats);
 
 		while ($fa = $rs_alum->fetch_object()) {
 			$id_alumno = $fa->id_alumno;
 			$nomAlum = $fa->nom;
+			$id_m = $fa->id_materia;
 			$matAlum = $fa->nombre;
 			$grupAlum = $fa->id_grupo;
 			array_push($alumnos_mat, ["$cc" => array(
 				"id_alumno" => $id_alumno,
 				"nomAlum" => $nomAlum,
+				"id_materia" => $id_m,
 				"matAlum" => $matAlum,
 				"idGrupAlum" => $grupAlum
 			)]);

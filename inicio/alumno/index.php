@@ -14,14 +14,14 @@
 	# SELECT DATOS DE ALUMNO
 	#$conn = mysqli_connect("74.208.191.226","gamanto","Serial3/0","ceumh");
 
-	$query = "select concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nomalu, a.cuatrimestre, a.grupo, a.foto, c.nombre as nomcar from alumnos as a, carrera as c where a.carrera = c.id_Carrera and id_alumno = ".$user;
+	$query = "select concat(a.nombre,' ',a.apellido_pat,' ',a.apellido_mat) as nomalu, a.cuatrimestre, a.foto, c.nombre as nomcar from alumnos as a, carrera as c where a.carrera = c.id_Carrera and id_alumno = ".$user;
 
 	$result = $conn->query($query);
 
 	while($row = $result->fetch_object()) {
 		$nom_alu = $row->nomalu;
 		$cua_alu = $row->cuatrimestre;
-		$gru_alu = $row->grupo;
+		#$gru_alu = $row->grupo;
 		$fot_alu = $row->foto;
 		$car_alu = $row->nomcar;
 	}
@@ -138,7 +138,7 @@
 					Alumno: <?php echo $nom_alu ?><br>
 					Número de cuenta: <?php echo $user ?><br>
 					Cuatrimestre: <?php echo $cua_alu ?><br>
-					Grupo: <?php echo $gru_alu ?><br>
+					Grupo: <!--?php echo $gru_alu ?--><br>
 					Carrera: <?php echo $car_alu ?>
 				</div>
 			</div>

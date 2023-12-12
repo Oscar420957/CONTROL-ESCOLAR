@@ -47,18 +47,26 @@ function llenar_grupos(respuesta) {
 function llenar_alumnos(respuesta, idGrupo, idMateria) {
 	let arr2 = respuesta.arr2;
 
-	let c = 1;
+	//let c = 1;
 	for (let i of arr2) {
-		if (i[c].idGrupAlum == idGrupo) {
+		for (let nums in i) {
+			if (i[nums]["idGrupAlum"] == idGrupo && i[nums]["id_materia"] == idMateria) {
+				let div = $(`<div id='${i[nums]["id_alumno"]}'></div>`);
+				div.html(`${i[nums]["nomAlum"]}`);
+				div.addClass("divalum");
+				$("#alums").append(div);
+			}
+		}
+		/*if (i[c].idGrupAlum == idGrupo && i[c].id_materia == idMateria) {
 			let div = $(`<div id='${i[c].id_alumno}'></div>`);
 			div.html(`${i[c].nomAlum}`);
 			div.addClass("divalum");
 			$("#alums").append(div);
 			c++;
-		}
+		}*/
 	}
 
-	if (c != 1) { 
+	//if (c >= 1) { 
 		// ON CLICK de ALUMNOS
 		$(document).on('click', '.divalum', function() {
 			let idAlum = $(this).attr('id');
@@ -67,9 +75,9 @@ function llenar_alumnos(respuesta, idGrupo, idMateria) {
 			$(`#${idAlum}`).addClass("active");
 			$("#form-califs").css("display","grid");
 			
-			ver_calif_alum(idAlum, idMateria);
+			ver_calif_alum(idAlum, $("#grupo-mat .active").attr("id").split("_")[1]);
 		});
-	}
+	//}
 }
 
 
