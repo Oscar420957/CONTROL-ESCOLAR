@@ -34,10 +34,14 @@ function fill_select(datos, id) {
 	}
 }
 
-function bind_mat_to_doc(id_doc, id_mat) {
-	if ($("#doc-to-bind option:selected").val() || 
-		$("#mat-to-bind option:selected").val()) {
+function bind_mat_to_doc(event) {
+	if ($("#doc-to-bind").val() == null) {/*!$($(event.target.form).children()[0]).children()[1].value*/
 		alert("Sin docentes por asignar!");
+		return;
+	}
+
+	if ($("#mat-to-bind").val() == null) {
+		alert("Seleccione una materia adecuada!");
 		return;
 	}
 
@@ -52,7 +56,7 @@ function bind_mat_to_doc(id_doc, id_mat) {
 
 	ajax_mat_by_doc.done(function(respuesta) {
 		if (respuesta.res == "success") {
-			alert("Docente asignado al grupo correctamente!");
+			alert("Docente asignado a la materia correctamente!");
 		} else if (respuesta.res == "fail") {
 			alert("Ocurrio un error!");
 		}

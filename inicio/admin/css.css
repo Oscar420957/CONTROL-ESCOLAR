@@ -248,7 +248,11 @@ select::-webkit-scrollbar-track {background: crimson;}
 
 #bind-doc-matgroup {grid-column: 2;}
 
-#v-docentes option {background: crimson;}
+#v-docentes option,
+#v-docentes optgroup {background: crimson;}
+
+#v-docentes optgroup:disabled,
+#v-docentes optgroup:disabled option {background: rgba(0,0,0,0.4);}
 
 #rmv-doc-mg {grid-column: 3;}
 
