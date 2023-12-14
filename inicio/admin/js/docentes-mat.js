@@ -15,6 +15,7 @@ function fill_comboboxes() {
 
 	ajax_doc_mat.done(function(respuesta) {
 		fill_select(respuesta[0], "doc-to-bind");
+		console.log(respuesta[1]);
 		fill_select(respuesta[1], "mat-to-bind");
 	});
 
@@ -26,11 +27,42 @@ function fill_comboboxes() {
 function fill_select(datos, id) {
 	let select = $(`#${id}`);
 
-	for (let i in datos) {
-		let opt = $(`<option value='${i}'></option>`);
-		opt.html(datos[i]);
+	if (id == 'mat-to-bind') {
+		let map_matCuatri = new Map();
 
-		select.append(opt);
+		for (let i in datos) {
+			let id_mat = i;
+			let nom_mat = datos[i].split('-')[0];
+			let cuatri = datos[i].split('-')[1];
+
+			if (!map_matCuatri.has(cuatri)) {
+				map_matCuatri.set(cuatri, new Map());
+				map_matCuatri.get(cuatri).set(id_mat, nom_mat);
+			} else {
+				map_matCuatri.set(cuatri, map_matCuatri.get(cuatri).set(id_mat,nom_mat));
+			}
+
+			console.log(map_matCuatri);
+		}
+
+		for (let [k,v] of map_matCuatri) {
+			let optgr = $(`<optgroup label='Cuatrimestre ${k}°'></optgroup>`);
+
+			for (let [ki,vi] of v) {
+				let opt = $(`<option value='${ki}'></option>`);
+				opt.text(vi);
+				optgr.append(opt);
+			}
+
+			select.append(optgr);
+		}
+	} else {
+		for (let i in datos) {
+			let opt = $(`<option value='${i}'></option>`);
+			opt.html(datos[i]);
+
+			select.append(opt);
+		}
 	}
 }
 

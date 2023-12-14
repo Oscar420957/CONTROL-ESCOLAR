@@ -5,7 +5,7 @@
 	$query_doc_wout_mat = "select d.id_docente, concat(d.nombre,' ',d.apellido_pat,' ',d.apellido_mat) as nom from docentes as d where d.id_docente not in (select md.id_docente from materia_docente as md) group by d.id_docente";
 
 	# QUERY QUE SELECCIONA MATERIAS SIN DOCENTE ASIGNADO
-	$query_mat_wout_doc = "select m.id_materia, m.nombre from materia as m where m.id_materia not in (select md.id_materia from materia_docente as md)";
+	$query_mat_wout_doc = "select m.id_materia, m.nombre, m.cuatrimestre from materia as m where m.id_materia not in (select md.id_materia from materia_docente as md)";
 
 
 	$rs_docs = $conn->query($query_doc_wout_mat);
@@ -27,7 +27,7 @@
 		}
 
 		if ($fil2) {
-			$arr_mats[$fil2->id_materia] = $fil2->nombre;
+			$arr_mats[$fil2->id_materia] = $fil2->nombre."-".$fil2->cuatrimestre;
 		}
 	}
 
