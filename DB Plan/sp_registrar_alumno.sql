@@ -1,6 +1,6 @@
 DELIMITER //
 
-create procedure sp_registrar_alumno(in n varchar(50), in ap varchar(50), in am varchar(50), in ne int, in car int, in ctr int, in g int, in psw varchar(16), out id int)
+create procedure sp_registrar_alumno(in n varchar(50), in ap varchar(50), in am varchar(50), in ne int, in car int, in ctr int, in psw varchar(16), out id int)
 begin
     -- Declares must go before anything 
     declare id_mat int;
@@ -11,7 +11,7 @@ begin
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET var_final = 1;
     
 	-- Insert the new alumn into alumnos
-	insert into alumnos(nombre,apellido_pat,apellido_mat,nivel_educativo,carrera,cuatrimestre,grupo) values (n,ap,am,ne,car,ctr,g);
+	insert into alumnos(nombre,apellido_pat,apellido_mat,nivel_educativo,carrera,cuatrimestre) values (n,ap,am,ne,car,ctr);
     set @id_new_alum = last_insert_id();
     select @id_new_alum into id; -- Returns the id of the new registered alumn
     

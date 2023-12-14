@@ -7,7 +7,7 @@
 	$query_doc_wout_gru = "select md.id_docente, concat(d.nombre,' ',d.apellido_pat,' ',d.apellido_mat) as nom_docente, md.id_mat_doc, md.id_materia, m.cuatrimestre from materia_docente as md, docentes as d, materia as m where md.id_mat_doc not in (select gdm.id_mat_doc from grupo_docente_mat as gdm) and md.id_docente = d.id_docente and md.id_materia = m.id_materia group by md.id_mat_doc";
 
 	# QUERY QUE SELECCIONA GRUPOS SIN DOCENTE_MATERIA ASIGNADO
-	$query_mat_wout_doc = "select g.id_grupo, g.cuatrimestre, g.grupo from grupo as g where g.id_grupo not in (select gdm.id_grupo from grupo_docente_mat as gdm) and g.id_carrera = $carr group by g.id_grupo";
+	$query_mat_wout_doc = "select g.id_grupo, g.cuatrimestre, g.grupo from grupo as g where g.id_carrera = 1";
 
 
 	$rs_docs = $conn->query($query_doc_wout_gru);

@@ -108,10 +108,10 @@
 								Cuatrimestre:<br>
 								<input type="number" name="al-ctr" id="al-ctr" placeholder="Cuatrimestre (1-5)" class="inputs" min="1" max="5">
 							</label>
-							<label>
+							<!--label>
 								Grupo:<br>
 								<input type="number" name="al-gru" id="al-gru" placeholder="Grupo en número (1-2)" class="inputs readonly" min="1" max="2" value="1" readonly>
-							</label>
+							</label-->
 							<label for="al-pass">
 								Contraseña alumno:<br>
 								<input type="text" name="al-pass" id="al-pass" placeholder="Contraseña" minlength="8" maxlength="16" class="inputs">
@@ -128,8 +128,27 @@
 				</div>
 
 				<div id="create-group" class="v-divs">
-					<div class="div-title">Crear Grupo</div>
+					<div class="div-title">Alumnos | Grupo</div>
 					<div id="alus-grup" class="div-grey">
+						<form id="form-append-to-gru" class="form-gru-al">
+							<label for="ctri-alu" id="l-ctri-alu">
+								Cuatrimestre:<br>
+								<select name="ctri-alu" id="ctri-alu" class="inputs">
+									<option value="1">Primero (1°)</option>
+									<option value="2">Segundo (2°)</option>
+									<option value="3">Tercero (3°)</option>
+									<option value="4">Cuarto (4°)</option>
+									<option value="5">Quinto (5°)</option>
+								</select>
+							</label>
+							<label for="gru-alu" id="l-gru-alu">
+								Grupo:<br>
+								<select name="gru-alu" id="gru-alu" class="inputs"></select>
+							</label>
+							<div id="list-alu" class="grid-list"></div>
+							<input type="button" name="add-to-gru" id="add-to-gru" value="Agregar al grupo" class="inputs button">
+						</form>
+						<script type="text/javascript" src="./js/alumnos-grup.js"></script>
 					</div>
 				</div>
 			</div>

@@ -6,7 +6,7 @@
 
 	# QUERY que obtiene los grupos a los que da materias el docente
 	$query_grupos = "
-	select g.id_grupo, g.grupo, m.id_materia, m.nombre from grupo_docente_mat gdm, grupo as g, materia as m, materia_docente as md, docentes as d where gdm.id_grupo = g.id_grupo and gdm.id_mat_docente = md.id_mat_doc and md.id_materia = m.id_materia and md.id_docente = d.id_docente and d.id_docente = ".$id_docente;
+	select g.id_grupo, g.grupo, m.id_materia, m.nombre from grupo_docente_mat gdm, grupo as g, materia as m, materia_docente as md, docentes as d where gdm.id_grupo = g.id_grupo and gdm.id_mat_doc = md.id_mat_doc and md.id_materia = m.id_materia and md.id_docente = d.id_docente and d.id_docente = ".$id_docente;
 
 	$rs_grupos = $conn->query($query_grupos);
 

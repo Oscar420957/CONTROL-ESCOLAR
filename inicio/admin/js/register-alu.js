@@ -1,7 +1,7 @@
 $(document).ready(() => {
 	$("#al-guardar").on('click', save_alu);
 	$("#al-clear").on('click', () => {
-		$("#form-reg-alu input:not(input[type='button'],input[value='Universidad'],input[value='1'])").each((indx, elem) => {
+		$("#form-reg-alu input:not(input[type='button'],input[value='Universidad'])").each((indx, elem) => {
 			$(elem).val("");
 			back_to_normal();
 		});
